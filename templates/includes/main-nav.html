@@ -17,10 +17,8 @@
                 Devices
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="clothing-link">
-                <a href="" class="dropdown-item">Devices</a>
-                <a href="" class="dropdown-item">Accessories</a>
-                <a href="" class="dropdown-item">Pads</a>
-                <a href="" class="dropdown-item">Lifetime warranty</a>
+                <a href="{% url 'products' %}?category=devices" class="dropdown-item">Tens and Ems Devices</a>
+                
             </div>
         </li>
 
@@ -29,9 +27,7 @@
                 Accessories
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="homeware-link">
-                <a href="" class="dropdown-item">Bed &amp; Bath</a>
-                <a href="" class="dropdown-item">Kitchen &amp; Dining</a>
-                <a href="" class="dropdown-item">All Homeware</a>
+                <a href="{% url 'products' %}?category=accessories" class="dropdown-item">Accessories</a>
             </div>
         </li>
 
@@ -40,10 +36,16 @@
                 Pads
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="specials-link">
-                <a href="" class="dropdown-item">New Arrivals</a>
-                <a href="" class="dropdown-item">Deals</a>
-                <a href="" class="dropdown-item">Clearance</a>
-                <a href="" class="dropdown-item">All Specials</a>
+                <a href="{% url 'products' %}?category=pads" class="dropdown-item">Pads</a>
+            </div>
+        </li>
+
+        <li class="nav-item dropdown">
+            <a class="logo-font font-weight-bold nav-link text-black" href="#" id="specials-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Lifetime Warranty
+            </a>
+            <div class="dropdown-menu border-0" aria-labelledby="specials-link">
+                <a href="{% url 'products' %}?category=lifetime_ warranty" class="dropdown-item">Lifetime Warranty</a>
             </div>
         </li>
     </ul>
