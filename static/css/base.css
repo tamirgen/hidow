@@ -3,7 +3,7 @@ html {
 }
 
 body {
-    background: url('/media/hidow-logo.jpg') no-repeat center center fixed;
+    background: url('/media/hidow-cover.v1.jpg') no-repeat center center fixed;
     background-size: cover;
     height: calc(100vh - 164px);
     color: #555;
@@ -34,9 +34,9 @@ footer {
 }
 
 .shop-now-button {
-    background: black;
-    color: white;
-    min-width: 260px;
+    background: white;
+    color: black;
+    min-width: 180px;
 }
 
 .btn-black {
