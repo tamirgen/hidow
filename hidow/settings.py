@@ -29,6 +29,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY', 'a')
 DEBUG = 'DEVELOPMENT' in os.environ
 
 
+
 ALLOWED_HOSTS = ['hidow.herokuapp.com', 'localhost']
 
 
