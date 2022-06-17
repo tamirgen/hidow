@@ -20,6 +20,12 @@ footer {
     color: orangered;
 }
 
+#about-us {
+    color: white;
+    background-color: #000;
+    max-width: 100%;
+}
+
 /* from Bulma */
 .icon {
     align-items: center;
