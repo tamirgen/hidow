@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block page_header %}
+    <div class="container header-container">
+        <div class="row">
+            <div class="col"></div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block content %}
+<style>
+    body{
+        background: url('/media/hidow-cover.v1.jpg') no-repeat center center fixed;
+        background-size: cover;
+    }
+</style>
+    <div class="overlay"></div>
+    <div class="container-fluid">
+        <h1>Product review</h1>
+    </div>
+        <div>
+            <form method="POST">
+                {% csrf_token %}
+                {{ form.as_p }}
+                <button  class=" btn btn-primary" type="submit">RATE NOW</button>
+            </form>
+</div>
+{% endblock content %}
