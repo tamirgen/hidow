@@ -4,6 +4,10 @@ from django.utils import timezone
 # Create your models here.
 
 class Products(models.Model):
+
+    class Meta:
+        verbose_name_plural = 'Products'
+
     title = models.CharField(max_length=40)
     description = models.TextField(max_length=3000)
     title_upload_date = models.DateTimeField(default=timezone.now)

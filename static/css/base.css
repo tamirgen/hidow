@@ -20,10 +20,19 @@ footer {
     color: orangered;
 }
 
+#reviews-link {
+    padding-left: 50px;
+    color: black; 
+}
+
 #about-us {
     color: white;
     background-color: #000;
     max-width: 100%;
+}
+
+#rate-button {
+    justify-content: space-between;
 }
 
 /* from Bulma */
