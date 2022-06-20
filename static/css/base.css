@@ -35,6 +35,21 @@ footer {
     justify-content: space-between;
 }
 
+.card-group {
+    position: relative;
+    
+}
+
+.card-group p {
+    max-height 150px;
+}
+    
+.card-group button {
+    position: absolute;
+    bottom: 5px;
+}
+
+
 /* from Bulma */
 .icon {
     align-items: center;
