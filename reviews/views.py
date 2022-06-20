@@ -10,6 +10,8 @@ def review(request):
     context = {
         'items':items
     }
+
+    print(items)
     return render(request, "reviews/reviews.html",context)
 
 def rate(request, id):
