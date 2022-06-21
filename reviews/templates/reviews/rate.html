@@ -10,13 +10,13 @@
 {% endblock %}
 
 {% block content %}
-<style>
+<!-- <style>
     body{
         background: url('/media/hidow-cover.v1.jpg') no-repeat center center fixed;
         background-size: cover;
     }
-</style>
-    <div class="overlay"></div>
+</style> -->
+    <!-- <div class="overlay"></div>
     <div class="container-fluid">
         <h1>Product review</h1>
     </div>
@@ -26,5 +26,24 @@
                 {{ form.as_p }}
                 <button  class=" btn btn-primary" type="submit">RATE NOW</button>
             </form>
-</div>
+        </div>  
+    </div> -->
+        
+    <div class="overlay"></div>
+    <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-4">
+                    <img src="{ url '/media/hidow-cover.v1.jpg'}" class="card-img">
+                </div>
+                <div class="col-md-8">
+                    <div class="form-group">
+                    <form method="POST">
+                        {% csrf_token %}
+                        {{ form.as_p }}
+                        <button  class=" btn btn-primary" type="submit">RATE NOW</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    
 {% endblock content %}
