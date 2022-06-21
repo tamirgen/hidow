@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block page_header %}
+<div class="container header-container">
+    <div class="row">
+        <div class="col"></div>
+    </div>
+</div>
+{% endblock %}
+
+{% block content %}
+    {% for review in reviews %}
+    <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3">
+
+        <div class="card-body">
+            <p class="mb-0">{{ review.author }}</p>
+        </div>
+    </div>
+{% endfor %}
+{% endblock %}

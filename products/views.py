@@ -3,6 +3,7 @@ from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from django.db.models import Q
 from .models import Product, Category
+from reviews.models import Products, Review
 from django.db.models.functions import Lower
 
 from .forms import ProductForm
@@ -135,3 +136,42 @@ def delete_product(request, product_id):
     product.delete()
     messages.success(request, 'Product deleted!')
     return redirect(reverse('products'))
+
+@login_required
+def enable_rating(request, product_id):
+    if not request.user.is_superuser:
+        messages.error(request, 'Sorry, only store owners can do that.')
+        return redirect(reverse('home'))
+    product = get_object_or_404(Product, pk=product_id)
+    product.enable_rating = True
+    product.save()
+    Products.objects.create(name=product.name, productId=product_id, description=product.description, rating=product.rating, image=product.image)
+    return redirect(reverse('products'))    
+
+
+@login_required
+def disable_rating(request, product_id):
+    if not request.user.is_superuser:
+        messages.error(request, 'Sorry, only store owners can do that.')
+        return redirect(reverse('home'))
+    product = get_object_or_404(Product, pk=product_id)
+    product.enable_rating = False
+    product.save() 
+    productRating = get_object_or_404(Products, productId=product_id)
+    productRating.delete()
+    return redirect(reverse('products'))
+
+def get_reviews(request, product_id):
+    try:
+      productRating = get_object_or_404(Products, productId=product_id)
+      reviews = Review.objects.all().filter(product=productRating)
+      context={
+        'reviews': reviews
+      }  
+      
+    except:
+        context={
+        'reviews': []
+      } 
+    return render(request, "products/reviews.html", context)
+    

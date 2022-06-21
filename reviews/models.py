@@ -8,13 +8,14 @@ class Products(models.Model):
     class Meta:
         verbose_name_plural = 'Products'
 
-    title = models.CharField(max_length=40)
-    description = models.TextField(max_length=3000)
-    title_upload_date = models.DateTimeField(default=timezone.now)
-    product_cover = models.FileField(upload_to='')
+    name = models.CharField(default='', max_length=254)
+    description = models.TextField()
+    rating = models.DecimalField(max_digits=6, decimal_places=2, null=True, blank=True)
+    image = models.ImageField(null=True, blank=True)
+    productId=models.BigIntegerField(default=0) 
 
     def __str__(self):
-        return self.title
+        return self.name
     
 
 class Review(models.Model):
@@ -32,5 +33,5 @@ class Review(models.Model):
     product = models.ForeignKey(Products, on_delete=models.CASCADE)
 
     def __str__(self):
-        return self.product.title
+        return self.product.name
 

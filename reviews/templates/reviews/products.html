@@ -15,9 +15,8 @@
         {% for item in items %}
             <div class="card-deck col-sm-6 col-md-6 col-lg-4 col-xl-3">
                 <div class="card border-0">
-                    <h3>{{ item.title}}</h3>
-                    <h6>Released on : {{ item.title_upload_date|date:"F d, Y" }}</h6>
-                    <img src="{{ item.product_cover.url }}">
+                    <h3>{{ item.name}}</h3>
+                    <img src="{{ item.image.url }}">
                     <p>{{ item.description }}</p>
                     <button><a href="{% url 'rate' item.id %}">RATE NOW</a></button>
                 </div>

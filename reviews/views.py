@@ -5,14 +5,13 @@ from .forms import ReviewForm
 
 
 
-def review(request):
+def products(request):
     items = Products.objects.all()
     context = {
         'items':items
     }
 
-    print(items)
-    return render(request, "reviews/reviews.html",context)
+    return render(request, "reviews/products.html", context)
 
 def rate(request, id):
     post = Products.objects.get(id=id)
