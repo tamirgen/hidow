@@ -6,7 +6,7 @@ from .forms import ReviewForm
 
 
 def products(request):
-    items = Product.objects.all()
+    items = Products.objects.all()
     context = {
         'items':items
     }

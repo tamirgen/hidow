@@ -19,7 +19,7 @@
                     <h3>{{ item.name}}</h3>
                     {% if item.image %}
                     <img src="{{ item.image.url }}">
-                    {% esle %}
+                    {% else %}
                     <a href="">
                         <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png" alt="{{ product.name }}">
                     </a>
