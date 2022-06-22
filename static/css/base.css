@@ -13,6 +13,7 @@ body {
 footer {
     overflow: hidden;
     background-color: white;
+    padding-top: 30px;
 }
 
 #lifetime_warranty-link {
@@ -37,11 +38,10 @@ footer {
 
 .card-group {
     position: relative;
-    
 }
 
 .card-group p {
-    max-height 150px;
+    max-height 200px;
 }
     
 .card-group button {
