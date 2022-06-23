@@ -173,5 +173,5 @@ def get_reviews(request, product_id):
         context={
         'reviews': []
       } 
-    return render(request, "products/reviews.html", context)
+    return render(request, "reviews/no-review.html", context)
     
