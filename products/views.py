@@ -162,7 +162,7 @@ def disable_rating(request, product_id):
     return redirect(reverse('products'))
 
 def get_reviews(request, product_id):
-    
+    try:
         productRating = get_object_or_404(Products, productId=product_id)
         reviews = Review.objects.all().filter(product=productRating)
         context = {
@@ -172,3 +172,5 @@ def get_reviews(request, product_id):
             return render(request, "products/reviews.html", context)
         else:
             return render(request, "products/no-review.html", context)
+    except:
+        return render(request, "products/no-review.html")
