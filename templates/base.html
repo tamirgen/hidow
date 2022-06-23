@@ -80,7 +80,7 @@
                                     <p class="my-0">My Account</p>
                                 </div>
                             </a>
-                            <div class="dropdown-menu border-0" aria-labelledby="user-options">
+                            <div class="dropdown-menu border-0" aria-labelledby="user-option">
                                 {% if request.user.is_authenticated %}
                                     {% if request.user.is_superuser %}
                                         <a href="{% url 'add_product' %}" class="dropdown-item">Product Management</a>
@@ -178,7 +178,7 @@
                     <!-- Begin Mailchimp Signup Form -->
                     <div id="mc_embed_signup">
                         <form action="https://hotmail.us18.list-manage.com/subscribe/post?u=04fbfc90d0d4a9cbf26daa0f2&amp;id=bc1b1b1223" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
-                                <div id="mc_embed_signup_scroll">
+                                <div id="mc_embed_signup_scroll"></div>
                             <div class="indicates-required"><span class="asterisk">*</span> indicates required</div>
                             <div class="mc-field-group">
                                 <label for="mce-EMAIL">Email Address  <span class="asterisk">*</span>
