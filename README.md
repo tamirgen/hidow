@@ -8,7 +8,7 @@ The website is very intuitive and provides a seamless customer journey from the 
 In addition, the website allows to read and write reviews about selected products that the website admin enables or disables from the app itself or the admin panel.
 
 
-[Here is a link to the live version of the App](https://django-hotel-booking.herokuapp.com/)
+[Here is a link to the live version of the App](https://hidow.herokuapp.com/)
 
 ![Responsive Mockup](https://github.com/tamirgen/DjangoHotelReservation/blob/main/booking/assests/media/am-I-responsive-screenshot.jpg?raw=true)
 
