@@ -11,14 +11,14 @@
 
 {% block content %}
     <div class="overlay"></div>
-    <h2 class="text-black text-center"style="padding-top: 20px;">Rate our products</h2>
+    <h2 class="text-black text-center" style="padding-top: 20px;">Rate our products</h2>
     <div class="card-group">
         {% for item in items %}
             <div class="card-deck col-sm-6 col-md-6 col-lg-4 col-xl-3">
                 <div class="card border-0">
                     <h3>{{ item.name}}</h3>
                     {% if item.image %}
-                    <img src="{{ item.image.url }}">
+                    <img src="{{ item.image.url }}" alt="product image">
                     {% else %}
                     <a href="">
                         <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png" alt="{{ product.name }}">

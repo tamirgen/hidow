@@ -1,17 +1,17 @@
-from django.shortcuts import render,redirect
+from django.shortcuts import render, redirect
 from .models import Products
-from .models import Review 
+from .models import Review
 from .forms import ReviewForm
-
 
 
 def products(request):
     items = Products.objects.all()
     context = {
-        'items':items
+        'items': items
     }
 
     return render(request, "reviews/products.html", context)
+
 
 def rate(request, id):
     post = Products.objects.get(id=id)
@@ -20,16 +20,18 @@ def rate(request, id):
         author = request.POST.get('author')
         stars = request.POST.get('stars')
         comment = request.POST.get('comment')
-        review = Review(author=author, stars=stars,  comment=comment , product=post)
+        review = Review(author=author, stars=stars,  comment=comment,
+                        product=post)
         review.save()
         return redirect('success')
 
     form = ReviewForm()
     context = {
-        "form":form
+        "form": form
 
     }
-    return render(request, 'reviews/rate.html',context)
+    return render(request, 'reviews/rate.html', context)
+
 
 def success(request):
     return render(request, "reviews/success.html")
