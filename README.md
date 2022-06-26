@@ -16,6 +16,7 @@ In addition, the website allows to read and write reviews about selected product
 
 ## User Experience (UX)
 ----------------------
+<br>
 
 ### Project Goals
 -----------------
@@ -24,6 +25,7 @@ In addition, the website allows to read and write reviews about selected product
 * Provide the users with a post-purchase summary, confirmation email, and an option to store their data for future orders and to view past orders.
 * Make sure the users' data is safe by offering secure login and by using Stripe as a secure online transactions expertise.
 
+<br>
 
 ### User Stories
 ----------------
@@ -53,6 +55,8 @@ In addition, the website allows to read and write reviews about selected product
 * As a website owner I can delete reviews so that I can leave just the ones I am using in the website
 * As a website owner I can enable and disable the products reviews so that decide which products to allow getting reviewed
 
+<br>
+
 ### Color Scheme
 ----------------
 The colors used in the site are three different ones:
@@ -62,6 +66,7 @@ The colors used in the site are three different ones:
 I have chosen those basic colors as for me they represent luxury and high-end products like the brand I have chosen to create the App for.
 Those colors were also chosen to give the user good contrast between the background and text.
 
+<br>
 
 ### Typography
 --------------
@@ -103,11 +108,9 @@ The main font used in the site Sans-Serif.
     - It contains the user's login and registration links. If the user is logged in, it contains the user's profile as well.
     - Shopping bag that stores the products that the user picked and presents the total amount of products picked so far.
 
-
-   <br>
-
 * **Footer**
 ------------
+
 ![Footer image](https://github.com/tamirgen/hidow/blob/main/media/readme-footer.jpg?raw=true)
 
 - The footer includes links to Facebook and Mailchimp newsletter.
@@ -116,20 +119,22 @@ The main font used in the site Sans-Serif.
 
 - All footer links will open in a new tab.
 
-<br>
-
 * **Landing Page**
 ----------------
+
+![Landing-page-main-section](https://github.com/tamirgen/hidow/blob/main/media/readme-landing-page-main.jpg?raw=true)
+
 ![Landing-page-sub-section](https://github.com/tamirgen/hidow/blob/main/media/landing-page-sub-section.jpg?raw=true)
 
 - The landing page contains the website header, 2 sections, and a footer.
 - The main section is a cover image with an H2 headline and a call-to-action button for "Shop Now".
 - The secondary section contains general information about the brand, the main benefits of using the products, and links to external links with further information.
 
-<br>
-
 * **Products page**
 ----------------------------
+
+![All products page](https://github.com/tamirgen/hidow/blob/main/media/readme-all-products.jpg?raw=true)
+
 This page contains all the products and can be reached from the "Shop Now" button or the "ALL PRODUCTS" button in the main nav.
 
 - The page has the following sorting options:
@@ -148,12 +153,13 @@ This page contains all the products and can be reached from the "Shop Now" butto
   * Rating
   * Image of the item
 
- ![room details and date selection](https://github.com/tamirgen/DjangoHotelReservation/blob/main/booking/assests/media/room-details-dates.jpg?raw=true)
-
-<br>
-
 * **Product Details page**
 -----------------
+
+![product details page top](https://github.com/tamirgen/hidow/blob/main/media/readme-product-top.jpg?raw=true)
+
+![product details page bottom](https://github.com/tamirgen/hidow/blob/main/media/readme-product-bottom.jpg?raw=true)
+
 - The page contains a detailed description of the product.
 - Every product has the following information:
   * Title
@@ -168,12 +174,12 @@ The selector can be used by writing the quantity, using the +\- buttons or the u
     * KEEP SHOPPING- Sends the user back to the "ALL PRODUCTS" page. 
     * REVIEWS- Send the user to read the reviews about the product.
 
-<br>
-
-![room details in case not logged or registered](https://github.com/tamirgen/DjangoHotelReservation/blob/main/booking/assests/media/HMS-bookings-cancel-update.jpg?raw=true)
-
 * **The Shopping Bag**
 --------------------
+
+![Shopping bag top](https://github.com/tamirgen/hidow/blob/main/media/readme-shopping-bag-top.jpg?raw=true)
+
+![Shopping bag bottom](https://github.com/tamirgen/hidow/blob/main/media/readme-shopping-bag-bottom.jpg?raw=true)
 
 - Clicking on the shopping bag icon will redirect the user to the shopping bag page (one step before the checkout).
 - The user will have a summary of the products he collected, including: 
@@ -185,36 +191,32 @@ The selector can be used by writing the quantity, using the +\- buttons or the u
  * Quantity.
  * Subtotal.
 
- ![room details in case not logged or registered](https://github.com/tamirgen/DjangoHotelReservation/blob/main/booking/assests/media/HMS-bookings-cancel-update.jpg?raw=true)
-
 - In addition, the user can update his selection by using the same quantity selector as on the Product Details page, and additionally, he can remove the item completely from the bag.
 
 - The bottom part of the page includes the total amount, delivery cost, the grand total, and 2 buttons.
 One bottom to get to the checkout ("SECURE CHECKOUT") and the other to "KEEP SHOPPING".
 
-
-![room canceltion](https://github.com/tamirgen/DjangoHotelReservation/blob/main/booking/assests/media/room-cancaltion-page.jpg?raw=true)
-
-<br>
-
 * **Checkout page**
 ------------------------------
+
+![Checkout top](https://github.com/tamirgen/hidow/blob/main/media/readme-checkout-top.jpg?raw=true)
+
+![Checkout bottom](https://github.com/tamirgen/hidow/blob/main/media/readme-checkout-bottom.jpg?raw=true)
 
 - The user provides his information for the shipment and adds his payment information.
 - At the bottom of the form, he can create an account or log in so that his data can be saved on his profile for future visits to the website.
 - Next to the form there is a summary of the items to be purchased.
 
-![room canceltion](https://github.com/tamirgen/DjangoHotelReservation/blob/main/booking/assests/media/room-cancaltion-page.jpg?raw=true)
-
 - The very bottom of the page contains 2 buttons. One is for completing the order, and the other is to adjust the shopping bag. The total amount to be charged is presented under the "Complete Order" button.
 - Clicking the "Complete Order" button will initiate a link to Stripe for completing the order.
 - Click the "Adjust Bag" button will send the user back the shopping bag for editing the order.
 
-
-![room canceltion](https://github.com/tamirgen/DjangoHotelReservation/blob/main/booking/assests/media/HMS-booking-update-page.jpg?raw=true)
-
 * **Thank you page**
 ------------------------------
+
+![Thank you paoge top](https://github.com/tamirgen/hidow/blob/main/media/readme-thank-you-top.jpg?raw=true)
+
+![Thank you page bottom](https://github.com/tamirgen/hidow/blob/main/media/readme-thank-you-bottom.jpg?raw=true)
 
 - The page contains the user order details. The form has the following:
  * Summary of products purchased.
@@ -225,25 +227,21 @@ One bottom to get to the checkout ("SECURE CHECKOUT") and the other to "KEEP SHO
 " Your order information is below. A confirmation email will be sent to {user email}."
 - At the bottom of the form there is a caa=ll-to-action button that offers the user to check out the latest deal called "NOW CHECK OUT THE LATEST DEALS". The button will send the user to a page with products selected by the admin from any category he would like.
 
-![room canceltion](https://github.com/tamirgen/DjangoHotelReservation/blob/main/booking/assests/media/HMS-booking-update-page.jpg?raw=true)
-
-![room canceltion](https://github.com/tamirgen/DjangoHotelReservation/blob/main/booking/assests/media/HMS-booking-update-page.jpg?raw=true)
-
-
-
 * **Write a review**
 ----------------------
+
+![Write a review top](https://github.com/tamirgen/hidow/blob/main/media/readme-write-review-top.jpg?raw=true)
+
+![Write a review bottom](https://github.com/tamirgen/hidow/blob/main/media/readme-write-review-bottom.jpg?raw=true)
 
 - The page contains products that were pre-approved by the admin to be eligible for getting a review.
 - The page is accessed through the "REVIEW" tab from the main navigation bar.
 - Every product in that section has an image, title, short description, and a button called "RATE NOW" that redirects to the review form.
 
-![room canceltion](https://github.com/tamirgen/DjangoHotelReservation/blob/main/booking/assests/media/HMS-booking-update-page.jpg?raw=true)
-
-![room canceltion](https://github.com/tamirgen/DjangoHotelReservation/blob/main/booking/assests/media/HMS-booking-update-page.jpg?raw=true)
-
 * **Review form**
 ----------------------
+
+![Write a review form](https://github.com/tamirgen/hidow/blob/main/media/readme-review-form.jpg?raw=true)
 
 - The review form contains 3 parts:
  * Auther title\name.
@@ -255,24 +253,19 @@ One bottom to get to the checkout ("SECURE CHECKOUT") and the other to "KEEP SHO
 - After submitting the form, the user will be redirected to a thank you page that has a "BACK TO OUR HOME PAGE" button and a "Thank you. Your review will be checked by the website owner." massage.
 
 
-
-![room canceltion](https://github.com/tamirgen/DjangoHotelReservation/blob/main/booking/assests/media/HMS-booking-update-page.jpg?raw=true)
-
-![room canceltion](https://github.com/tamirgen/DjangoHotelReservation/blob/main/booking/assests/media/HMS-booking-update-page.jpg?raw=true)
-
 * **My Profile**
 ----------------------
+
+![Profile top](https://github.com/tamirgen/hidow/blob/main/media/readme-profile.jpg?raw=true)
+
+![Profile bottom](https://github.com/tamirgen/hidow/blob/main/media/readme-profile.jpg?raw=true)
 
 - The page contains 2 sections:
     - Profile information: The information extracted at the checkout page if the user created an account or has an account is stored on the left side of the page.
     - Previous orders: The right side contains all the users' past orders. The visible information includes the order date, order products, and the order amount.
     The order number is clickable and will redirect to order complete information.
 
-
-![room canceltion](https://github.com/tamirgen/DjangoHotelReservation/blob/main/booking/assests/media/HMS-booking-update-page.jpg?raw=true)
-
-![room canceltion](https://github.com/tamirgen/DjangoHotelReservation/blob/main/booking/assests/media/HMS-booking-update-page.jpg?raw=true)
-
+<br>
 
 ### Admin Features
 ------------------
@@ -281,14 +274,14 @@ One bottom to get to the checkout ("SECURE CHECKOUT") and the other to "KEEP SHO
 ----------------
 - The admin has 3 options that can only be shown to the admin.
 
-![room canceltion](https://github.com/tamirgen/DjangoHotelReservation/blob/main/booking/assests/media/HMS-booking-update-page.jpg?raw=true)
+![Admin extra buttons](https://github.com/tamirgen/hidow/blob/main/media/readme-admin-options.jpg?raw=true)
 
 Under every product there are 3 links:
 Edit:
 This page can be reached also from the Admin profile using the "Product Management" option.
 On this page, there is a form with all the product attributes. The admin can edit any of them including uploading a new image. The same option exists in the admin panel under the "Products" model.
 
-![room canceltion](https://github.com/tamirgen/DjangoHotelReservation/blob/main/booking/assests/media/HMS-booking-update-page.jpg?raw=true)
+![Admin edit page](https://github.com/tamirgen/hidow/blob/main/media/readme-admin-edit-page.jpg?raw=true)
 
 Delete:
 This option will delete the product from the website.
@@ -301,7 +294,7 @@ Yellow- means that the review is enabled.
 Green- means that the review is disabled.
 
 
-![room canceltion](https://github.com/tamirgen/DjangoHotelReservation/blob/main/booking/assests/media/HMS-booking-update-page.jpg?raw=true)
+![Enable\disable reviews](https://github.com/tamirgen/hidow/blob/main/media/readme-enable-disable-review.jpg?raw=true)
 
 
 * **Admin panel**
@@ -325,21 +318,26 @@ The Admin panel includes the following sections:
     - Reviews: the admin can view, add, remove and edit any review in the section.
     - Reviews: 
 
-![admin panel email addresses list](https://github.com/tamirgen/DjangoHotelReservation/blob/main/booking/assests/media/admin-email-addresses.jpg?raw=true)
+![admin panel](https://github.com/tamirgen/hidow/blob/main/media/readme-admin-panel.jpgg?raw=true)
 
 <br>
 
 ## Technologies Used
 ---------------------
 
+<br>
+
 ### Languages Used
+------------------
 
 * [HTML5](https://en.wikipedia.org/wiki/HTML5)
 * [CSS3](https://en.wikipedia.org/wiki/CSS)
 * [JS](https://en.wikipedia.org/wiki/JavaScript)
 
-### Frameworks, Libraries and Programs Used
+<br>
 
+### Frameworks, Libraries and Programs Used
+--------------------------------------------
 * [Font Awesome](https://fontawesome.com/)
      - Font Awesome was used throughout all pages to add icons in order to create a better visual experience for UX purposes.
 
@@ -382,6 +380,7 @@ The Admin panel includes the following sections:
 * [FACEBOOK](https://mailchimp.com/)
     - FACEBOOK was used to create social media account for the brand.
 
+<br>
 
 ## Data Model
 --------------
@@ -459,10 +458,12 @@ All the apps' functunality is revolve around the shopping bag signals.
      - "rate" is a view to present the rate form and to redirect to thank you page.
      - "success" is a view to render the thank you page.
 
-   <br>
+<br>
 
 ## Testing
 -----------
+
+<br>
 
 ### Testing User Stories
 ------------------------
@@ -551,6 +552,8 @@ All the apps' functunality is revolve around the shopping bag signals.
 
 * Passed the code through [PEP8](http://pep8online.com/) and made sure it is error free.
 
+<br>
+
 ### Accessibility
 -----------------
 
@@ -560,20 +563,21 @@ All the apps' functunality is revolve around the shopping bag signals.
 
     - **Landing Page**
 
-    ![Lighthouse report for home page image](https://github.com/tamirgen/DjangoHotelReservation/blob/main/booking/assests/media/lighthouse-home.jpg?raw=true)
+    ![Lighthouse report for home page image](https://github.com/tamirgen/hidow/blob/main/media/hidow-lighthouse-landing.jpg?raw=true)
 
     - **Procudt details**
 
-    ![Lighthouse report for room details page image](https://github.com/tamirgen/DjangoHotelReservation/blob/main/booking/assests/media/lighthouse-booking-conf.jpg?raw=true)
+    ![Lighthouse report for room details page image](https://github.com/tamirgen/hidow/blob/main/media/hidow-lighthouse-products.jpg?raw=true)
 
     - **Checkout page**
 
-    ![Lighthouse report for booking confirmation page image](https://github.com/tamirgen/DjangoHotelReservation/blob/main/booking/assests/media/lighthouse-room-details.jpg?raw=true)
+    ![Lighthouse report for booking confirmation page image](https://github.com/tamirgen/hidow/blob/main/media/hidow-lighthouse-checkout.jpg?raw=true)
 
     - **Reviews page**
 
-     ![Lighthouse report for booking confirmation page image](https://github.com/tamirgen/DjangoHotelReservation/blob/main/booking/assests/media/lighthouse-room-details.jpg?raw=true)
+     ![Lighthouse report for booking confirmation page image](https://github.com/tamirgen/hidow/blob/main/media/hidow-lighthouse-reviews.jpg?raw=true)
 
+<br>
 
 ### Tools Testing
 -----------------
@@ -587,6 +591,7 @@ All the apps' functunality is revolve around the shopping bag signals.
     - [Am I Responsive?](http://ami.responsivedesign.is/#) was used to check responsiveness of the site pages across different devices.
     - Chrome DevTools was used to test responsiveness in different screen sizes during the development process.
 
+<br>
 
 ### Additional testing
 ---------------------
@@ -598,10 +603,10 @@ All the apps' functunality is revolve around the shopping bag signals.
 - App was tested on IOS and Android.
 - A test to add an ending to the URL resulted in a 404 error and redirecting button to home.
 
+<br>
 
 ## Authentication
 -----------------
-<br>
 
 The application is using the built-in "Allauth" app to authenticate users and Admin.
 - For Admins, the App will present a list of email addresses of users who created accounts in the Admin panel.
@@ -614,13 +619,138 @@ The Admin can then authenticate those emails or delete them from the system. In 
 - For Admin, Admin has access to the Product Management tab for editing the products in the app.
 In addition, an admin can delete a product and enable\disable reviews from the app if logged in.
 
-
 - Allauth templates were changed to fit the style of the App and to be more appealing to the end-user.
 
+<br>
 
+## Bugs
+--------
+- In production, the CSS files were not loading. That was due to the fact that DEBUG was set to True. Changing it to False and pushing again fixed the issue.
 
+<br>
 
+## Deployment
+--------------
 
+To deploy the project, I have used the following steps:
 
+* Creating the Heroku app
+* In Heroku add Postgres database to the resources
+* In the workspace install and freeze dj_database_url, and psycopg2
+* Add import dj_database_urlto setting and change the DATEBASE URL to the Postgres url.
+* Run migrations
+* Make sure your manage.py file is connected to your sqlite3 database
+ * Use this command to backup your current database and load it into a db.json file:
+./manage.py dumpdata --exclude auth.permission --exclude contenttypes > db.json
+* Connect your manage.py file to your postgres database
+* Then use this command to load your data from the db.json file into postgres:
+./manage.py loaddata db.json
+* In settings.py add this if\else statement to use the database in the correct environment:
+if 'DATABASE_URL' in os.environ:
+    DATABASES = {
+        'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))
+    }
+else:
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.sqlite3',
+            'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        }
+    }
+* Install gunicorn and freeze
+* Create a Procfile at the same level as manage.py and add:
+web: gunicorn hidow.wsgi:application
+* Disable collectstatic by running Heroku config:set DISABLE_COLLECTSTATIC=1 --app appname
+* In settings.py add ['hidow.herokuapp.com', 'localhost'] to ALLOWED HOSTS
+* Push to Github then push to Heroku using git push Heroku main
+* Set auto-deploy to Heroku by linking the Github repository and enable automatic deploys
+* Add a SECRET KEY to Heroku config vars then import it to the workspace
+* Set DEBUG to be True only in local environment
+* Create an AWS account
+* Sign in to your account 
+* On the AWS services find and go to s3.
+* Create a new bucket
+* Go to the bucket's settings and set the properties, permissions, and policy settings
+* Create an IAM service
+* Create a group
+* Create a policy for the group using the bucket's ARN
+* Attach the policy to the group
+* Create a user and give him programmatic access
+* Add the user to the group that has the policy attached to, and create the user
+* Download and save the CSV file to use in Heroku
+* In the workspace install and freeze boto3 And django-storages
+* Add 'storages' to installed apps in settings.py
+* Add to settings.py:
+if 'USE_AWS' in os.environ:
+
+    AWS_STORAGE_BUCKET_NAME = 
+    AWS_S3_REGION_NAME =
+    AWS_ACCESS_KEY_ID = 
+    AWS_SECRET_ACCESS_KEY =
    
+* Add to Heroku config vars- AWS_SECRET_ACCESS_KEY, AWS_ACCESS_KEY_ID using information from the CSV file.
+In addition, add USE_AWS= True to config vars
+* Remove DISABLE_COLLECTSTATIC from Heroku config var
+* "Add AWS_S3_CUSTOM_DOMAIN =" to the AWS settings in settings.py
+* Create a file called custom_storage.py in the same level as manage.py and add:
+from django.conf import settings
+from storages.backends.s3boto3 import S3Boto3Storage
 
+
+class StaticStorage(S3Boto3Storage):
+    location = settings.STATICFILES_LOCATION
+
+
+class MediaStorage(S3Boto3Storage):
+    location = settings.MEDIAFILES_LOCATION
+* Add to setting.py in the AWS section:
+
+STATICFILES_STORAGE = 'custom_storages.StaticStorage'
+    STATICFILES_LOCATION = 'static'
+    DEFAULT_FILE_STORAGE = 'custom_storages.MediaStorage'
+    MEDIAFILES_LOCATION = 'media'
+and
+STATIC_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/{STATICFILES_LOCATION}/'
+MEDIA_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/{MEDIAFILES_LOCATION}/'
+* Push the changes to Heroku
+* On s3, select your bucket and click "create folder" called media
+* Inside the file click "upload" then "Add files" and select your images
+* Click next and grant public access to the files and upload
+* Login as a superuser to the deployed app
+* Add Stripe's STRIPE_PUBLIC_KEY and STRIPE_SECRET_KEY to config vars
+* Create in Stripe new endpoint webhooks by adding the Heroku deployed URL followed by checkout/wh to a new endpoint webhook
+* Reveal the new endpoint and add it Heroku config vars as STRIPE_WH_SECRET
+
+<br>
+
+## SEO
+------
+
+The SEO for this project included the following steps:
+
+ - Keywords research: I have used Google Ads account for keywords research and Google search organic results.
+ I then filtered out short and long-tail keywords that were a good fit for the app.
+ - Implementing keywords on the website: I have used the selected keywords on H2 and H3 headlines. In addition, I have added a section on the landing page with 4 paragraphs that contain long and short-tail keywords. Lastly, I have used the <strong> element to let the search engine know those are important keywords.
+ - I have implemented the meta tags for keywords and descriptions in the header.
+ - I have 3 external links to blogs and websites that further explain medical terms regarding TENS and EMS, which increase SEO, and website reliability.
+ - I have implemented sitemap.xl and robot.txt, both contribute to the legitemisity of the website and improve SEO.
+
+<br>
+
+## Marketing and business plan
+-----------------------------
+
+The general business plan for Hidow is to make the transformation from a B2C to B2B business.
+The business plan is to combine offline promotions with online exposure.
+The offline exposure will be done by attending professional conventions and meeting prospective businesses to carry the brand.
+The online marketing I have chosen will expose the product in 3 different ways:
+ * Influencers: I will reach out to medical and sports influencers to post and promote the products for me, in return for a cut of the earnings.
+ * Targeting older population (product research shows best clients are 40-70 years old) via paid advertising on Facebook and Google Ads.
+
+![Facebook page](https://github.com/tamirgen/hidow/blob/main/media/facebook-screenshot-hidow-project.jpg?raw=true)
+
+* By sending discount coupon codes to users who signup for the Mailchimp newsletter on the website
+ 
+ ![Mailchimp](https://github.com/tamirgen/hidow/blob/main/media/readme-footer.jpg?raw=true) 
+
+ By using those targeting methods I will be able to draw attention to the brand and hopefully secure a deal with a big pharmaceutical chain.
