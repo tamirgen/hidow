@@ -151,6 +151,7 @@ def delete_product(request, product_id):
 
 @login_required
 def enable_rating(request, product_id):
+    " A view to enable reviwing a product"
     if not request.user.is_superuser:
         messages.error(request, 'Sorry, only store owners can do that.')
         return redirect(reverse('home'))
@@ -165,6 +166,7 @@ def enable_rating(request, product_id):
 
 @login_required
 def disable_rating(request, product_id):
+    " A view to disaable reviwing a product"
     if not request.user.is_superuser:
         messages.error(request, 'Sorry, only store owners can do that.')
         return redirect(reverse('home'))
@@ -177,6 +179,7 @@ def disable_rating(request, product_id):
 
 
 def get_reviews(request, product_id):
+    "A view to dispaly reviews for the products"
     try:
         productRating = get_object_or_404(Products, productId=product_id)
         reviews = Review.objects.all().filter(product=productRating)

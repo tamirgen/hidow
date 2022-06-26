@@ -385,50 +385,114 @@ The Admin panel includes the following sections:
 --------------
 
 I have used six apps for this project, each servse a difernt porpuse:
+
 - The bag app:
+
    * The app doesn't use database models.
+
    * The app has 4 views:
     - view_bag: renders the bag content.
     - add_to_bag: Add a quantity of the specified product to the shopping bag.
     - adjust_bag: Adjust the quantity of the specified product to the specified amount.
     - remove_from_bag: Remove the item from the shopping bag.
 
+The app is usnig the data from the Product model of the products app. 
 All the apps' functunality is revolve around the shopping bag signals.
 
-- BookingListView class is in charge of presenting lists per site roles and permisssions:
-   * If the user is a staff member, the function will return a list of the hotel bookings.
-   * If the user is a logged-in user (authenticated), the function will present a list of all his bookings.
+- The checkout app:
 
-- RoomDetailView class is in charge of the following:
-   * The class will create a booking form that contains check-in, check-out and a booking button.
-   * The function will check if the form is valid and, if the room is available on the selected dates:
-      - If the room is free, it will transfer the user to the booking confirmation page.
-      - If the room is not free, he will get a message: "All of this category of rooms are booked! Try another one".
-   * The function will check if the category exists. If it doesn't, the user will get the following massage:
-   "Category does not exist, please go back and choose a valid category".
+    * The app has 2 models:
+     - "Order" model that collects all the information needed from the user for shipment and payment.
+     - "OrderLineItem" that overrides the original save method to set the line item total
+        and update the order total.
 
-   - CancelBookingView class is in charge of:
-      * Handling the room cancelation.
-      * Returning the user to the booking_list_view.
+    * The app uses 3 views:
+     - "cache_checkout_data" is in charge of chaching the data in case of failed payment.
+     - "checkout" is in charge of collecting and processing the data for the products in the checkout and ensuring all users' required data was inserted in the form. It will also attempt to prefill the form if the data is found on the users' profile
+     - "checkout_success" view will handle successful checkouts. That includes saving users' information and order and redirecting to the “thank you" page.
 
-     - UpdateBookingView class is in charge of:
-      * Handling the room updates.
-      * Returning the user to the booking_list_view.
+     This app makes use of models Product from products app, UserProfile form profiles, and UserProfileForm form from profile app.
+
+
+- The home app:
+
+    * The app doesn't use database models.
+
+    * The app has 1 view called called "index" the returns the index page.
+
+- The products app:
+
+    * The app has 2 models:
+     - The Category model collects and stores the product's name and friendly name.
+     - The Product model that stores the product's category, SKU, description, size, price, rating, image URL, image, and reviews enabled\disabled.
+
+    * The app has 8 views:
+     - "all_products"- A view to show all products, including sorting and search queries.
+     - "product_detail"- A view to show individual product details.
+     - "add_produc"- A view to add a product to the store.
+     - "edit_produc"- A view to edit a product in the store.
+     - "delet_produc"- A view to delete a product from the store.
+     - "enable_rating"- A view to enable reviewing a product.
+     - "disable_ratin"- A view to disable reviewing a product.
+     - "get_reviews"- A view to display reviews for the products.
+
+    * The app is using the Products and Reviews models from the reviews app.
+
+- The profiles app:
+
+    * The app uses 1 model called "UserProfile" that stores the user's default phone number, street address 1 and 2, city or town, county, postcode, and country. The model has a function that creates or edit profile details.
+
+    * The app has 2 views:
+     - The "profile" view is in charge of rendering the user's profile in the "MY PROFILE" page. In addition, it will present profile changes and past orders.
+      - The "order_history" will present and render specific orders from the past orders stored on the database.
+
+- - The reviews app:
+
+    * The reviews app has 2 models:
+      - The Products model stores data that includes name, description, rating, image, and product id.
+      - The Review model stores the review's author, review date, rating 1-5 stars, comment, and product.
+
+    * The app has 3 views:
+     - "products" is in charge of rendering the products to be reviewed.
+     - "rate" is a view to present the rate form and to redirect to thank you page.
+     - "success" is a view to render the thank you page.
 
    <br>
 
-There are three database models:
+## Testing
+-----------
 
-   - Room_Categories:
-      * This DB contains the room's name and description.
-      * Its job is to create categories and to supply the initial descriptions of them.
+### Testing User Stories
+------------------------
 
-   - Room:
-      * This DB contains the actual room information within the category and contains the room number, what category it belongs to, how many beds it has and how many guests can sleep in it.
-      * Its job is to supply information across the app.
+* As a website user I can see a list of products so that I can choose the product I would like to buy
+* As a website user I can select a category so that I can easily find products
+* As a website user I can get details so that I can see the price, product description, and sizes, when there are ones
+* As a website user I can see the shopping bag so that I can know how much I have spent so far
+* As a website user I can register for an account so that I can see my order history and store my personal details
+* As a website user I can easily log in and out of the account so that I can save my address and personal data
+* As a website user I can recover my password so that I can log in if I forgot my password
+* As a website user I can get a confirmation email after registration so that I can know that the registration was successful
+* As a website user I can sort the products so that I can easily identify the products based on price or category
+* As a website user I can sort the products within a specific category so that I can compare products based on price and description
+* As a website user I can sort the products by inserting the product name of title so that I can easily find the specific product I am looking for
+* As a website user I can easily select the size and amount of products so that I can ensure I have the correct amounts and the right product amount
+* As a website user I can see the items and the prices detailed in the shopping bag so that I can know what I am ordering and what will it cost me
+* As a website user I can adjust my shopping bag so that I can make changes to my order before the checkout
+* As a website user I can quickly enter my payment information so that I can checkout with no hassle
+* As a website user I can get an order confirmation after the checkout so that I can verify I did not make any mistakes
+* As a website user I can securely enter my payment information so that I can be sure my information will not be used by malicious users
+* As a website user I can get an email after completing the checkout so that I can have all the information and a reminder of what I have purchased
+* As a Site owner I can add a product so that I can add new items to my store
+* As a Site owner I can edit existing products so that I can change prices, sizes, and descriptions if I need to
+* As a Site owner I can delete an item so that remove items that are no longer for sale
+* As a website user I can add a review so that other users can get an honest opinion on the products
+* As a website user I can read reviews about products so that I can make a decision if to buy it
+* As a website owner I can delete reviews so that I can leave just the ones I am using in the website
+* As a website owner I can enable and disable the products reviews so that decide which products to allow getting reviewed
 
-   - Booking:
-      * This DB contains the relationship between the user, the room, and the dates.
-      * Its job is to supply the information for the booking form.
 
-   <br>
+
+
+   
+
