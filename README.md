@@ -82,7 +82,7 @@ The main font used in the site Sans-Serif.
 
 * **Header**
 -----------
-![Header image](https://github.com/tamirgen/DjangoHotelReservation/blob/main/booking/assests/media/HMS-header.jpg?raw=ture)
+![Header image](https://github.com/tamirgen/hidow/blob/main/media/readme-header.jpg?raw=ture)
     
 - The header contains the business name and a fully responsive navigation bar positioned across the top of the screen.
 
@@ -92,6 +92,8 @@ The main font used in the site Sans-Serif.
 
 * **The Navigation Bar**
 ------------------------
+
+![Top-nav image](https://github.com/tamirgen/hidow/blob/main/media/readme-header.jpg?raw=ture)
 
 - The bar appears across all the website pages, and contains the following:
     - The product name, also serve as a home button.
@@ -106,7 +108,7 @@ The main font used in the site Sans-Serif.
 
 * **Footer**
 ------------
-![Footer image](https://github.com/tamirgen/DjangoHotelReservation/blob/main/booking/assests/media/HMS-footer.jpg?raw=true)
+![Footer image](https://github.com/tamirgen/hidow/blob/main/media/readme-footer.jpg?raw=true)
 
 - The footer includes links to Facebook and Mailchimp newsletter.
 
@@ -118,7 +120,7 @@ The main font used in the site Sans-Serif.
 
 * **Landing Page**
 ----------------
-![room categories](https://github.com/tamirgen/DjangoHotelReservation/blob/main/booking/assests/media/select-a-room.jpg?raw=true)
+![Landing-page-sub-section](https://github.com/tamirgen/hidow/blob/main/media/landing-page-sub-section.jpg?raw=true)
 
 - The landing page contains the website header, 2 sections, and a footer.
 - The main section is a cover image with an H2 headline and a call-to-action button for "Shop Now".
