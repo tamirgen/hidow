@@ -318,7 +318,7 @@ The Admin panel includes the following sections:
     - Reviews: the admin can view, add, remove and edit any review in the section.
     - Reviews: 
 
-![admin panel](https://github.com/tamirgen/hidow/blob/main/media/readme-admin-panel.jpgg?raw=true)
+![admin panel](https://github.com/tamirgen/hidow/blob/main/media/readme-admin-panel.jpg?raw=true)
 
 <br>
 
@@ -392,10 +392,10 @@ I have used six apps for this project, each servse a difernt porpuse:
    * The app doesn't use database models.
 
    * The app has 4 views:
-    - view_bag: renders the bag content.
-    - add_to_bag: Add a quantity of the specified product to the shopping bag.
-    - adjust_bag: Adjust the quantity of the specified product to the specified amount.
-    - remove_from_bag: Remove the item from the shopping bag.
+     - view_bag: renders the bag content.
+     - add_to_bag: Add a quantity of the specified product to the shopping bag.
+     - adjust_bag: Adjust the quantity of the specified product to the specified amount.
+     - remove_from_bag: Remove the item from the shopping bag.
 
 The app is usnig the data from the Product model of the products app. 
 All the apps' functunality is revolve around the shopping bag signals.
@@ -403,14 +403,14 @@ All the apps' functunality is revolve around the shopping bag signals.
 - The checkout app:
 
     * The app has 2 models:
-     - "Order" model that collects all the information needed from the user for shipment and payment.
-     - "OrderLineItem" that overrides the original save method to set the line item total
+      - "Order" model that collects all the information needed from the user for shipment and payment.
+      - "OrderLineItem" that overrides the original save method to set the line item total
         and update the order total.
 
     * The app uses 3 views:
-     - "cache_checkout_data" is in charge of chaching the data in case of failed payment.
-     - "checkout" is in charge of collecting and processing the data for the products in the checkout and ensuring all users' required data was inserted in the form. It will also attempt to prefill the form if the data is found on the users' profile
-     - "checkout_success" view will handle successful checkouts. That includes saving users' information and order and redirecting to the “thank you" page.
+      - "cache_checkout_data" is in charge of chaching the data in case of failed payment.
+      - "checkout" is in charge of collecting and processing the data for the products in the checkout and ensuring all users' required data was inserted in the form. It will also attempt to prefill the form if the data is found on the users' profile
+      - "checkout_success" view will handle successful checkouts. That includes saving users' information and order and redirecting to the “thank you" page.
 
      This app makes use of models Product from products app, UserProfile form profiles, and UserProfileForm form from profile app.
 
@@ -424,18 +424,18 @@ All the apps' functunality is revolve around the shopping bag signals.
 - The products app:
 
     * The app has 2 models:
-     - The Category model collects and stores the product's name and friendly name.
-     - The Product model that stores the product's category, SKU, description, size, price, rating, image URL, image, and reviews enabled\disabled.
+      - The Category model collects and stores the product's name and friendly name.
+      - The Product model that stores the product's category, SKU, description, size, price, rating, image URL, image, and reviews enabled\disabled.
 
     * The app has 8 views:
-     - "all_products"- A view to show all products, including sorting and search queries.
-     - "product_detail"- A view to show individual product details.
-     - "add_produc"- A view to add a product to the store.
-     - "edit_produc"- A view to edit a product in the store.
-     - "delet_produc"- A view to delete a product from the store.
-     - "enable_rating"- A view to enable reviewing a product.
-     - "disable_ratin"- A view to disable reviewing a product.
-     - "get_reviews"- A view to display reviews for the products.
+      - "all_products"- A view to show all products, including sorting and search queries.
+      - "product_detail"- A view to show individual product details.
+      - "add_produc"- A view to add a product to the store.
+      - "edit_produc"- A view to edit a product in the store.
+      - "delet_produc"- A view to delete a product from the store.
+      - "enable_rating"- A view to enable reviewing a product.
+      - "disable_ratin"- A view to disable reviewing a product.
+      - "get_reviews"- A view to display reviews for the products.
 
     * The app is using the Products and Reviews models from the reviews app.
 
@@ -444,19 +444,19 @@ All the apps' functunality is revolve around the shopping bag signals.
     * The app uses 1 model called "UserProfile" that stores the user's default phone number, street address 1 and 2, city or town, county, postcode, and country. The model has a function that creates or edit profile details.
 
     * The app has 2 views:
-     - The "profile" view is in charge of rendering the user's profile in the "MY PROFILE" page. In addition, it will present profile changes and past orders.
+      - The "profile" view is in charge of rendering the user's profile in the "MY PROFILE" page. In addition, it will present profile changes and past orders.
       - The "order_history" will present and render specific orders from the past orders stored on the database.
 
-- - The reviews app:
+ - The reviews app:
 
     * The reviews app has 2 models:
       - The Products model stores data that includes name, description, rating, image, and product id.
       - The Review model stores the review's author, review date, rating 1-5 stars, comment, and product.
 
     * The app has 3 views:
-     - "products" is in charge of rendering the products to be reviewed.
-     - "rate" is a view to present the rate form and to redirect to thank you page.
-     - "success" is a view to render the thank you page.
+      - "products" is in charge of rendering the products to be reviewed.
+      - "rate" is a view to present the rate form and to redirect to thank you page.
+      - "success" is a view to render the thank you page.
 
 <br>
 
@@ -469,78 +469,78 @@ All the apps' functunality is revolve around the shopping bag signals.
 ------------------------
 
 * As a website user I can see a list of products so that I can choose the product I would like to buy
- - The all products page has a list of all the website's products
+  - The all products page has a list of all the website's products
 
 * As a website user I can select a category so that I can easily find products
- - The all products page has a category sorting option. In addition, every category can be reached individually from the main navigation bar
+  - The all products page has a category sorting option. In addition, every category can be reached individually from the main navigation bar
 
 * As a website user I can get details so that I can see the price, product description, and sizes when there are ones
- - The product_details page presents the product's name, category, description, rating, and price
+  - The product_details page presents the product's name, category, description, rating, and price
 
 * As a website user I can see the shopping bag so that I can know how much I have spent so far
- - The shopping bag icon will change from black to light blue indicating that there is something on it. I have tested all scenarios including adding, removing, and updating the shopping bag
+  - The shopping bag icon will change from black to light blue indicating that there is something on it. I have tested all scenarios including adding, removing, and updating the shopping bag
 
 * As a website user I can register for an account so that I can see my order history and store my personal details
- - The MY PROFILE section was tested for being presented and all fields can be edited and saved. Creating a profile was also tested
+  - The MY PROFILE section was tested for being presented and all fields can be edited and saved. Creating a profile was also tested
 
 * As a website user I can easily log in and out of the account so that I can save my address and personal data
- - Log in and out were tested. The user's data was presented in the account upon next sign in and presented in the checkout
+  - Log in and out were tested. The user's data was presented in the account upon next sign in and presented in the checkout
 
 * As a website user I can recover my password so that I can log in if I forgot my password
- - Password recovery process was tested and is working as intended
+  - Password recovery process was tested and is working as intended
 * As a website user I can get a confirmation email after registration so that I can know that the registration was successful
- - The confirmation email process was tested and it is working is intended
+  - The confirmation email process was tested and it is working is intended
 
 * As a website user I can sort the products so that I can easily identify the products based on price or category
- - The website contains sorting options for price and category. Tested for all pricing and categories. The prices can be sorted from low to high\high to low and the categories can be sorted for the same but also from A-Z and Z-A. all tested, all working
+  - The website contains sorting options for price and category. Tested for all pricing and categories. The prices can be sorted from low to high\high to low and the categories can be sorted for the same but also from A-Z and Z-A. all tested, all working
 
 * As a website user I can sort the products within a specific category so that I can compare products based on price and description
- - Inside each category, a user can sort based on price or description if he uses the search bar. Both tested and function well
+  - Inside each category, a user can sort based on price or description if he uses the search bar. Both tested and function well
 
 * As a website user I can sort the products by inserting the product name or title so that I can easily find the specific product I am looking for
- - The search bar is functioning well and will find results both in headline and product discription
+  - The search bar is functioning well and will find results both in headline and product discription
 
 * As a website user I can easily select the size and amount of products so that I can ensure I have the correct sizes and the right product amount
- - The app has the logic to enable size selection. As none of the current products has a size selection, it is not available for testing, but it was tested using a demo product and working. The logic implemented for potential future products with sizes. The quantity selector was tested for all the options that include manual quantity insert, using +\- buttons and the up\down arrows in add a quantity selectors across the entire app
+  - The app has the logic to enable size selection. As none of the current products has a size selection, it is not available for testing, but it was tested using a demo product and working. The logic implemented for potential future products with sizes. The quantity selector was tested for all the options that include manual quantity insert, using +\- buttons and the up\down arrows in add a quantity selectors across the entire app
 
 * As a website user I can see the items and the prices detailed in the shopping bag so that I can know what I am ordering and what will it cost me
- - The shopping bag app was tested for all possible scenarios including adding, removing, editing and deleting a product or all the products from the shopping bag. All tests updated quantities and order total prices
+  - The shopping bag app was tested for all possible scenarios including adding, removing, editing and deleting a product or all the products from the shopping bag. All tests updated quantities and order total prices
 
 * As a website user I can adjust my shopping bag so that I can make changes to my order before the checkout
- - The bag page contains a summary of the products and all the editing options of the quantity selector. The page has additional functionality for updating shopping bag and removing a product from it. All tested
+  - The bag page contains a summary of the products and all the editing options of the quantity selector. The page has additional functionality for updating shopping bag and removing a product from it. All tested
 
 * As a website user I can quickly enter my payment information so that I can checkout with no hassle
- - The checkout form uses a seamless method to increase UX. The only fields that need to be inserted manually are the user's name and email to avoid shipping issues and to add extra security to the order process. All tested and functioning as expected
+  - The checkout form uses a seamless method to increase UX. The only fields that need to be inserted manually are the user's name and email to avoid shipping issues and to add extra security to the order process. All tested and functioning as expected
 
 * As a website user I can get an order confirmation after the checkout so that I can verify I did not make any mistakes
- - The confirmation email post payment was tested and emails are received as planned
+  - The confirmation email post payment was tested and emails are received as planned
 
 * As a website user I can securely enter my payment information so that I can be sure my information will not be used by malicious users
- - The app is using Stripe as the payment processing institute. Stripe provides multiple layers of securing the payment method. Documentation can be found on [STRIPE](https://stripe.com/docs/security/stripe#:~:text=Stripe%20has%20been%20audited%20by,level%20of%20security%20at%20Stripe.)
+  - The app is using Stripe as the payment processing institute. Stripe provides multiple layers of securing the payment method. Documentation can be found on [STRIPE](https://stripe.com/docs/security/stripe#:~:text=Stripe%20has%20been%20audited%20by,level%20of%20security%20at%20Stripe.)
 
 * As a website user I can get an email after completing the checkout so that I can have all the information and a reminder of what I have purchased
- - The purchase email confirmation was tested and is working as intended
+  - The purchase email confirmation was tested and is working as intended
 
 * As a Site owner I can add a product so that I can add new items to my store
- - The add_product page allows the owner to add a new product from the app without going to the admin panel. Adding a product was tested for a product with an image, without an image, and mistakes like wrong prices (too many numbers after the decimal point), and missing required information (mandatory fields are name, description, and price). all tested as expected both in-app and admin panel
+  - The add_product page allows the owner to add a new product from the app without going to the admin panel. Adding a product was tested for a product with an image, without an image, and mistakes like wrong prices (too many numbers after the decimal point), and missing required information (mandatory fields are name, description, and price). all tested as expected both in-app and admin panel
 
 * As a Site owner I can edit existing products so that I can change prices, sizes, and descriptions if I need to
- - All editing functionalities were tested on the edit_product page and admin panel including mistakes like wrong prices (too many numbers after the decimal point), and missing required information (mandatory fields are name, description, and price). all tested as expected both in-app and admin panel
+  - All editing functionalities were tested on the edit_product page and admin panel including mistakes like wrong prices (too many numbers after the decimal point), and missing required information (mandatory fields are name, description, and price). all tested as expected both in-app and admin panel
 
 * As a Site owner I can delete an item so that remove items that are no longer for sale
- - Removing an item was successfully tested both on the app and admin panel
+  - Removing an item was successfully tested both on the app and admin panel
 
 * As a website user I can add a review so that other users can get an honest opinion on the products
- - The rate.html page is accessible from the reviews tab in the main navigation bar and leads to the allowed products to be reviewed by the website admin. The form was tested and the test include trying to submit a review without filling out the mandatory fields (star rating and description). Post a successful review, the review will appear on the reviews.html page
+  - The rate.html page is accessible from the reviews tab in the main navigation bar and leads to the allowed products to be reviewed by the website admin. The form was tested and the test include trying to submit a review without filling out the mandatory fields (star rating and description). Post a successful review, the review will appear on the reviews.html page
 
 * As a website user I can read reviews about products so that I can make a decision if to buy it
   - The reviews page was tested and is working as intended. If the are reviews, they will show on the reviews.html page. If there are no reviews the page will render a message that is no current reviews and a button to return to the all products page
 
 * As a website owner I can delete reviews so that I can leave just the ones I am using in the website
- - Deleting reviews is enabled through the admin panel and was tested successfully
+  - Deleting reviews is enabled through the admin panel and was tested successfully
 
 * As a website owner I can enable and disable the products reviews so that decide which products to allow to get reviewed
-    - The admin has an enable\disable button in the app itself that changes colors accordingly. He can also enable\disable reviews through the product setting of the Product model in the admin panel. Both options were tested and logic is functioning as expected
+     - The admin has an enable\disable button in the app itself that changes colors accordingly. He can also enable\disable reviews through the product setting of the Product model in the admin panel. Both options were tested and logic is functioning as expected
 
 <br>
 
