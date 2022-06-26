@@ -38,7 +38,7 @@ In addition, the website allows to read and write reviews about selected product
 * As a website user I can sort the products so that I can easily identify the products based on price or category
 * As a website user I can sort the products within a specific category so that I can compare products based on price and description
 * As a website user I can sort the products by inserting the product name of title so that I can easily find the specific product I am looking for
-* As a website user I can easily select the size and amount of products so that I can ensure I have the correct amounts and the right product amount
+* As a website user I can easily select the size and amount of products so that I can ensure I have the correct sizes and the right product amount
 * As a website user I can see the items and the prices detailed in the shopping bag so that I can know what I am ordering and what will it cost me
 * As a website user I can adjust my shopping bag so that I can make changes to my order before the checkout
 * As a website user I can quickly enter my payment information so that I can checkout with no hassle
@@ -466,30 +466,156 @@ All the apps' functunality is revolve around the shopping bag signals.
 ------------------------
 
 * As a website user I can see a list of products so that I can choose the product I would like to buy
+ - The all products page has a list of all the website's products
+
 * As a website user I can select a category so that I can easily find products
-* As a website user I can get details so that I can see the price, product description, and sizes, when there are ones
+ - The all products page has a category sorting option. In addition, every category can be reached individually from the main navigation bar
+
+* As a website user I can get details so that I can see the price, product description, and sizes when there are ones
+ - The product_details page presents the product's name, category, description, rating, and price
+
 * As a website user I can see the shopping bag so that I can know how much I have spent so far
+ - The shopping bag icon will change from black to light blue indicating that there is something on it. I have tested all scenarios including adding, removing, and updating the shopping bag
+
 * As a website user I can register for an account so that I can see my order history and store my personal details
+ - The MY PROFILE section was tested for being presented and all fields can be edited and saved. Creating a profile was also tested
+
 * As a website user I can easily log in and out of the account so that I can save my address and personal data
+ - Log in and out were tested. The user's data was presented in the account upon next sign in and presented in the checkout
+
 * As a website user I can recover my password so that I can log in if I forgot my password
+ - Password recovery process was tested and is working as intended
 * As a website user I can get a confirmation email after registration so that I can know that the registration was successful
+ - The confirmation email process was tested and it is working is intended
+
 * As a website user I can sort the products so that I can easily identify the products based on price or category
+ - The website contains sorting options for price and category. Tested for all pricing and categories. The prices can be sorted from low to high\high to low and the categories can be sorted for the same but also from A-Z and Z-A. all tested, all working
+
 * As a website user I can sort the products within a specific category so that I can compare products based on price and description
-* As a website user I can sort the products by inserting the product name of title so that I can easily find the specific product I am looking for
-* As a website user I can easily select the size and amount of products so that I can ensure I have the correct amounts and the right product amount
+ - Inside each category, a user can sort based on price or description if he uses the search bar. Both tested and function well
+
+* As a website user I can sort the products by inserting the product name or title so that I can easily find the specific product I am looking for
+ - The search bar is functioning well and will find results both in headline and product discription
+
+* As a website user I can easily select the size and amount of products so that I can ensure I have the correct sizes and the right product amount
+ - The app has the logic to enable size selection. As none of the current products has a size selection, it is not available for testing, but it was tested using a demo product and working. The logic implemented for potential future products with sizes. The quantity selector was tested for all the options that include manual quantity insert, using +\- buttons and the up\down arrows in add a quantity selectors across the entire app
+
 * As a website user I can see the items and the prices detailed in the shopping bag so that I can know what I am ordering and what will it cost me
+ - The shopping bag app was tested for all possible scenarios including adding, removing, editing and deleting a product or all the products from the shopping bag. All tests updated quantities and order total prices
+
 * As a website user I can adjust my shopping bag so that I can make changes to my order before the checkout
+ - The bag page contains a summary of the products and all the editing options of the quantity selector. The page has additional functionality for updating shopping bag and removing a product from it. All tested
+
 * As a website user I can quickly enter my payment information so that I can checkout with no hassle
+ - The checkout form uses a seamless method to increase UX. The only fields that need to be inserted manually are the user's name and email to avoid shipping issues and to add extra security to the order process. All tested and functioning as expected
+
 * As a website user I can get an order confirmation after the checkout so that I can verify I did not make any mistakes
+ - The confirmation email post payment was tested and emails are received as planned
+
 * As a website user I can securely enter my payment information so that I can be sure my information will not be used by malicious users
+ - The app is using Stripe as the payment processing institute. Stripe provides multiple layers of securing the payment method. Documentation can be found on [STRIPE](https://stripe.com/docs/security/stripe#:~:text=Stripe%20has%20been%20audited%20by,level%20of%20security%20at%20Stripe.)
+
 * As a website user I can get an email after completing the checkout so that I can have all the information and a reminder of what I have purchased
+ - The purchase email confirmation was tested and is working as intended
+
 * As a Site owner I can add a product so that I can add new items to my store
+ - The add_product page allows the owner to add a new product from the app without going to the admin panel. Adding a product was tested for a product with an image, without an image, and mistakes like wrong prices (too many numbers after the decimal point), and missing required information (mandatory fields are name, description, and price). all tested as expected both in-app and admin panel
+
 * As a Site owner I can edit existing products so that I can change prices, sizes, and descriptions if I need to
+ - All editing functionalities were tested on the edit_product page and admin panel including mistakes like wrong prices (too many numbers after the decimal point), and missing required information (mandatory fields are name, description, and price). all tested as expected both in-app and admin panel
+
 * As a Site owner I can delete an item so that remove items that are no longer for sale
+ - Removing an item was successfully tested both on the app and admin panel
+
 * As a website user I can add a review so that other users can get an honest opinion on the products
+ - The rate.html page is accessible from the reviews tab in the main navigation bar and leads to the allowed products to be reviewed by the website admin. The form was tested and the test include trying to submit a review without filling out the mandatory fields (star rating and description). Post a successful review, the review will appear on the reviews.html page
+
 * As a website user I can read reviews about products so that I can make a decision if to buy it
+  - The reviews page was tested and is working as intended. If the are reviews, they will show on the reviews.html page. If there are no reviews the page will render a message that is no current reviews and a button to return to the all products page
+
 * As a website owner I can delete reviews so that I can leave just the ones I am using in the website
-* As a website owner I can enable and disable the products reviews so that decide which products to allow getting reviewed
+ - Deleting reviews is enabled through the admin panel and was tested successfully
+
+* As a website owner I can enable and disable the products reviews so that decide which products to allow to get reviewed
+    - The admin has an enable\disable button in the app itself that changes colors accordingly. He can also enable\disable reviews through the product setting of the Product model in the admin panel. Both options were tested and logic is functioning as expected
+
+<br>
+
+### Code validation
+-------------------
+
+* The [W3C Markup Validator](https://validator.w3.org/) and [W3C CSS Validator](https://jigsaw.w3.org/css-validator/) services were used to validate all pages of the project in order to ensure there were no syntax errors.
+- No errors were found in the HTML or the CSS files.
+
+* Passed the code through [PEP8](http://pep8online.com/) and made sure it is error free.
+
+### Accessibility
+-----------------
+
+* Used Lighthouse in Chrome DevTools to confirm that the colors and fonts being used throughout the website are easy to read and accessible. In addition, making sure that performance, accessibility, best practices, and SEO are on good terms (the lighthouse test was done based on sampling pages)
+
+* Lighthouse reports
+
+    - **Landing Page**
+
+    ![Lighthouse report for home page image](https://github.com/tamirgen/DjangoHotelReservation/blob/main/booking/assests/media/lighthouse-home.jpg?raw=true)
+
+    - **Procudt details**
+
+    ![Lighthouse report for room details page image](https://github.com/tamirgen/DjangoHotelReservation/blob/main/booking/assests/media/lighthouse-booking-conf.jpg?raw=true)
+
+    - **Checkout page**
+
+    ![Lighthouse report for booking confirmation page image](https://github.com/tamirgen/DjangoHotelReservation/blob/main/booking/assests/media/lighthouse-room-details.jpg?raw=true)
+
+    - **Reviews page**
+
+     ![Lighthouse report for booking confirmation page image](https://github.com/tamirgen/DjangoHotelReservation/blob/main/booking/assests/media/lighthouse-room-details.jpg?raw=true)
+
+
+### Tools Testing
+-----------------
+
+* [Chrome DevTools](https://developer.chrome.com/docs/devtools/)
+
+    - Chrome DevTools was used during the development process to test, explore and modify HTML elements and CSS styles used in the project.
+
+* Responsiveness
+    
+    - [Am I Responsive?](http://ami.responsivedesign.is/#) was used to check responsiveness of the site pages across different devices.
+    - Chrome DevTools was used to test responsiveness in different screen sizes during the development process.
+
+
+### Additional testing
+---------------------
+
+- All buttons in the app were manually tested for desktop and mobile.
+- Webhooks was tested by checking the webhooks on the Stripe website.
+- Credit cards were tested by using the Stripe various card types for testing.
+- The app was tested on all main browsers (Chrome, Firefox, Explorer.
+- App was tested on IOS and Android.
+- A test to add an ending to the URL resulted in a 404 error and redirecting button to home.
+
+
+## Authentication
+-----------------
+<br>
+
+The application is using the built-in "Allauth" app to authenticate users and Admin.
+- For Admins, the App will present a list of email addresses of users who created accounts in the Admin panel.
+The Admin can then authenticate those emails or delete them from the system. In addition, it will provide a list of users and the prospective usernames in the Admin panel.
+
+- For users, there is a simple and friendly signup process. Once a user has signed up or logged in, he will be redirected to the landing page. The same will happen if he logs out. 
+
+- Registered and logged-in users will have access to their profiles where they can view and edit their details. In addition, they can see past orders and have the checkout form pre-filled for them for a faster checkout process.
+
+- For Admin, Admin has access to the Product Management tab for editing the products in the app.
+In addition, an admin can delete a product and enable\disable reviews from the app if logged in.
+
+
+- Allauth templates were changed to fit the style of the App and to be more appealing to the end-user.
+
+
 
 
 

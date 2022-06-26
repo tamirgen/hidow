@@ -40,11 +40,7 @@ footer {
     position: relative;
 }
 
-.card-group p {
-    max-height 200px;
-}
-    
-.card-group button {
+    .card-group button {
     position: absolute;
     bottom: 5px;
     margin-top: 100px;
@@ -113,7 +109,6 @@ footer {
 
 .bg-black {
     background: #000 !important;
-    ma
 }
 
 .overlay {
@@ -370,8 +365,3 @@ input[name='q']::placeholder {
     }
 }
 
-/* mailchimp css */
-
-#mc_embed_signup {
-    padding: 0,
-}
