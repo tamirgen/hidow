@@ -4,8 +4,8 @@
 Hidow is a B2C website that was designed to accommodate and to be an eCommerce platform for users who are 
 interested in buying TENS and EMS devices.
 Hidow provides the best-in-class devices and accessories for the devices that can be placed on almost every part of the body for pain relief, muscle stimulation, and recovery from training and injuries.
-The website is very intuitive and provides a seamless customer journey from the page landing to checkout.
-In addition, the website allows to read and write reviews about selected products that the website admin enables or disables from the app itself or the admin panel.
+The website is very intuitive and provides a seamless customer journey from the landing page to checkout.
+In addition, the website allows to read and write reviews about selected products that the website admin enables or disables from the app itself or from the admin panel.
 
 
 [Here is a link to the live version of the App](https://hidow.herokuapp.com/)
@@ -23,7 +23,7 @@ In addition, the website allows to read and write reviews about selected product
 * The website should have an intuitive and minimalist design, appealing to the customers.
 * Allow users to be able to sort the products with a lot of sorting options and to make an informed decision based on previous customers' reviews.
 * Provide the users with a post-purchase summary, confirmation email, and an option to store their data for future orders and to view past orders.
-* Make sure the users' data is safe by offering secure login and by using Stripe as a secure online transactions expertise.
+* Make sure the users' data is safe by offering secured login and by using Stripe as a secured online transactions expertise for payments processing.
 
 <br>
 
@@ -31,7 +31,7 @@ In addition, the website allows to read and write reviews about selected product
 ----------------
 * As a website user I can see a list of products so that I can choose the product I would like to buy
 * As a website user I can select a category so that I can easily find products
-* As a website user I can get details so that I can see the price, product description, and sizes, when there are ones
+* As a website user I can get the product's information so that I can see the price, product description, and sizes, when there are ones
 * As a website user I can see the shopping bag so that I can know how much I have spent so far
 * As a website user I can register for an account so that I can see my order history and store my personal details
 * As a website user I can easily log in and out of the account so that I can save my address and personal data
@@ -52,17 +52,17 @@ In addition, the website allows to read and write reviews about selected product
 * As a Site owner I can delete an item so that remove items that are no longer for sale
 * As a website user I can add a review so that other users can get an honest opinion on the products
 * As a website user I can read reviews about products so that I can make a decision if to buy it
-* As a website owner I can delete reviews so that I can leave just the ones I am using in the website
-* As a website owner I can enable and disable the products reviews so that decide which products to allow getting reviewed
+* As a website owner I can delete reviews so that I can leave just the ones I am using on the website
+* As a website owner I can enable and disable the products' reviews so that I can decide which products to allow getting reviewed
 
 <br>
 
 ### Color Scheme
 ----------------
-The colors used in the site are three different ones:
+The colors used on the site are three different ones:
 * The background is White: #ffffff
 * The Text is black.
-* The buttons and links are blue, light blue for positive actions, like updating orders and rating a product. They are white and black for standard actions like got to reviews or adding to bag and are red for removing a product from bag.
+* The buttons and links are blue, light blue for positive actions, like updating orders and rating a product. They are white and black for standard actions like go to reviews or adding to bag and are red for removing a product from bag.
 I have chosen those basic colors as for me they represent luxury and high-end products like the brand I have chosen to create the App for.
 Those colors were also chosen to give the user good contrast between the background and text.
 
@@ -140,11 +140,11 @@ This page contains all the products and can be reached from the "Shop Now" butto
 - The page has the following sorting options:
  - Sort by price, rating, or category.
  - Find specific products by using the search bar.
- - Additional sorting bar the sort by:
+ - Additional sorting bar that sorts by:
   * Price- low to high and vice versa.
   * Rating- low to high and vice versa.
-  * Name- low to high and vice versa.
-  * Category- low to high and vice versa.
+  * Name- A to Z and vice versa.
+  * Category- A to Z and vice versa.
 
 - Every product has the following information:
   * Title
@@ -168,7 +168,7 @@ This page contains all the products and can be reached from the "Shop Now" butto
   * Rating
   * Image of the item
 - Under the description, there is a quantity selector, in case the user wants to get more than 1 item.
-The selector can be used by writing the quantity, using the +\- buttons or the up|down arrows.
+The selector can be used by writing the quantity, using the +\- buttons or the up\down arrows.
 - Underneath the quantity selector there are 3 buttons:
     * ADD TO BAG- keeps the user on the same page, but updates the bag in the right top corner with the amount that was added to the bag so far.
     * KEEP SHOPPING- Sends the user back to the "ALL PRODUCTS" page. 
@@ -194,7 +194,7 @@ The selector can be used by writing the quantity, using the +\- buttons or the u
 - In addition, the user can update his selection by using the same quantity selector as on the Product Details page, and additionally, he can remove the item completely from the bag.
 
 - The bottom part of the page includes the total amount, delivery cost, the grand total, and 2 buttons.
-One bottom to get to the checkout ("SECURE CHECKOUT") and the other to "KEEP SHOPPING".
+One button to get to the checkout ("SECURE CHECKOUT") and the other to "KEEP SHOPPING".
 
 * **Checkout page**
 ------------------------------
@@ -225,7 +225,7 @@ One bottom to get to the checkout ("SECURE CHECKOUT") and the other to "KEEP SHO
  * Grand total broken down to product price and shipping price.
 - At the top of the form he will see a confirmation line saying:
 " Your order information is below. A confirmation email will be sent to {user email}."
-- At the bottom of the form there is a caa=ll-to-action button that offers the user to check out the latest deal called "NOW CHECK OUT THE LATEST DEALS". The button will send the user to a page with products selected by the admin from any category he would like.
+- At the bottom of the form there is a call-to-action button that offers the user to check out the latest deal called "NOW CHECK OUT THE LATEST DEALS". The button will send the user to a page with products selected by the admin from any category he would like.
 
 * **Write a review**
 ----------------------
@@ -261,9 +261,9 @@ One bottom to get to the checkout ("SECURE CHECKOUT") and the other to "KEEP SHO
 ![Profile bottom](https://github.com/tamirgen/hidow/blob/main/media/readme-profile.jpg?raw=true)
 
 - The page contains 2 sections:
-    - Profile information: The information extracted at the checkout page if the user created an account or has an account is stored on the left side of the page.
-    - Previous orders: The right side contains all the users' past orders. The visible information includes the order date, order products, and the order amount.
-    The order number is clickable and will redirect to order complete information.
+    - Profile information: The information extracted at the checkout page, if the user created an account or has an account, is stored on the left side of the page.
+    - Previous orders: The right side contains all the user's past orders. The visible information includes the order date, order products, and the order amount.
+    The order number is clickable and will redirect to an order's complete information.
 
 <br>
 
@@ -474,7 +474,7 @@ All the apps' functunality is revolve around the shopping bag signals.
 * As a website user I can select a category so that I can easily find products
   - The all products page has a category sorting option. In addition, every category can be reached individually from the main navigation bar
 
-* As a website user I can get details so that I can see the price, product description, and sizes when there are ones
+* As a website user I can get the product's information so that I can see the price, product description, and sizes when there are ones
   - The product_details page presents the product's name, category, description, rating, and price
 
 * As a website user I can see the shopping bag so that I can know how much I have spent so far
@@ -536,10 +536,10 @@ All the apps' functunality is revolve around the shopping bag signals.
 * As a website user I can read reviews about products so that I can make a decision if to buy it
   - The reviews page was tested and is working as intended. If the are reviews, they will show on the reviews.html page. If there are no reviews the page will render a message that is no current reviews and a button to return to the all products page
 
-* As a website owner I can delete reviews so that I can leave just the ones I am using in the website
+* As a website owner I can delete reviews so that I can leave just the ones I am using on the website
   - Deleting reviews is enabled through the admin panel and was tested successfully
 
-* As a website owner I can enable and disable the products reviews so that decide which products to allow to get reviewed
+* As a website owner I can enable and disable the products' reviews so that I can decide which products to allow to get reviewed
      - The admin has an enable\disable button in the app itself that changes colors accordingly. He can also enable\disable reviews through the product setting of the Product model in the admin panel. Both options were tested and logic is functioning as expected
 
 <br>
