@@ -784,3 +784,14 @@ The online marketing I have chosen will expose the product in 3 different ways:
  ![Mailchimp](https://github.com/tamirgen/hidow/blob/main/media/readme-footer.jpg?raw=true) 
 
  By using those targeting methods I will be able to draw attention to the brand and hopefully secure a deal with a big pharmaceutical chain.
+
+<br>
+
+## Credit
+---------
+
+- To Code Institue for the Boutique Ado walkthrough project that I have based large parts of my project on.
+- To the tutor support for helping troubleshooting issues.
+
+<br>
+
