@@ -52,7 +52,7 @@ In addition, the website allows to read and write reviews about selected product
 * As a Site owner I can delete an item so that remove items that are no longer for sale
 * As a website user I can add a review so that other users can get an honest opinion on the products
 * As a website user I can read reviews about products so that I can make a decision if to buy it
-* As a website owner I can delete reviews so that I can leave just the ones I am using on the website
+* As a website owner I can delete reviews so that I can leave the ones I am using on the website
 * As a website owner I can enable and disable the products' reviews so that I can decide which products to allow getting reviewed
 
 <br>
@@ -377,7 +377,7 @@ The Admin panel includes the following sections:
      - Balsamiq was used to create the wireframes during the design phase of the project.
 
 * [Am I Responsive?](http://ami.responsivedesign.is/#)
-    - Am I Responsive was used in order to see responsive design throughout the process and to generate mockup imagery to be used.
+    - Am I Responsive was used to get a responsive design throughout the process and to generate mockup imagery to be used.
 
 * [Chrome DevTools](https://developer.chrome.com/docs/devtools/)
     - Chrome DevTools was used during development process for code review and to test responsiveness.
@@ -411,7 +411,7 @@ The Admin panel includes the following sections:
 ## Data Model
 --------------
 
-I have used six apps for this project, each servse a difernt porpuse:
+I have used six apps for this project, each serves a difernt porpuse:
 
 - The bag app:
 
@@ -423,8 +423,8 @@ I have used six apps for this project, each servse a difernt porpuse:
      - adjust_bag: Adjust the quantity of the specified product to the specified amount.
      - remove_from_bag: Remove the item from the shopping bag.
 
-The app is usnig the data from the Product model of the products app. 
-All the apps' functunality is revolve around the shopping bag signals.
+The app is usig the data from the Product model of the products app. 
+All the apps' functunality is revolved around the shopping bag signals.
 
 - The checkout app:
 
@@ -445,7 +445,7 @@ All the apps' functunality is revolve around the shopping bag signals.
 
     * The app doesn't use database models.
 
-    * The app has 1 view called called "index" the returns the index page.
+    * The app has 1 view called called "index" that returns the index page.
 
 - The products app:
 
@@ -481,7 +481,7 @@ All the apps' functunality is revolve around the shopping bag signals.
 
     * The app has 3 views:
       - "products" is in charge of rendering the products to be reviewed.
-      - "rate" is a view to present the rate form and to redirect to thank you page.
+      - "rate" is a view to present the rate form and to redirect to the thank you page.
       - "success" is a view to render the thank you page.
 
 <br>
@@ -495,10 +495,10 @@ All the apps' functunality is revolve around the shopping bag signals.
 ------------------------
 
 * As a website user I can see a list of products so that I can choose the product I would like to buy
-  - The all products page has a list of all the website's products
+  - The all products' page has a list of all the website's products
 
 * As a website user I can select a category so that I can easily find products
-  - The all products page has a category sorting option. In addition, every category can be reached individually from the main navigation bar
+  - The all products' page has a category sorting option. In addition, every category can be reached individually from the main navigation bar
 
 * As a website user I can get the product's information so that I can see the price, product description, and sizes when there are ones
   - The product_details page presents the product's name, category, description, rating, and price
@@ -533,10 +533,10 @@ All the apps' functunality is revolve around the shopping bag signals.
   - The shopping bag app was tested for all possible scenarios including adding, removing, editing and deleting a product or all the products from the shopping bag. All tests updated quantities and order total prices
 
 * As a website user I can adjust my shopping bag so that I can make changes to my order before the checkout
-  - The bag page contains a summary of the products and all the editing options of the quantity selector. The page has additional functionality for updating shopping bag and removing a product from it. All tested
+  - The bag page contains a summary of the products and all the editing options of the quantity selector. The page has additional functionality for updating shopping bag and removing a product from it. All tests were positive
 
 * As a website user I can quickly enter my payment information so that I can checkout with no hassle
-  - The checkout form uses a seamless method to increase UX. The only fields that need to be inserted manually are the user's name and email to avoid shipping issues and to add extra security to the order process. All tested and functioning as expected
+  - The checkout form uses a seamless method to increase UX. The only fields that need to be inserted manually are the user's name and email to avoid shipping issues and to add extra security to the order process. All were tested and were functioning as expected
 
 * As a website user I can get an order confirmation after the checkout so that I can verify I did not make any mistakes
   - The confirmation email post payment was tested and emails are received as planned
@@ -548,21 +548,21 @@ All the apps' functunality is revolve around the shopping bag signals.
   - The purchase email confirmation was tested and is working as intended
 
 * As a Site owner I can add a product so that I can add new items to my store
-  - The add_product page allows the owner to add a new product from the app without going to the admin panel. Adding a product was tested for a product with an image, without an image, and mistakes like wrong prices (too many numbers after the decimal point), and missing required information (mandatory fields are name, description, and price). all tested as expected both in-app and admin panel
+  - The add_product page allows the owner to add a new product from the app without going to the admin panel. Adding a product was tested for a product with an image, without an image, and mistakes like wrong prices (too many numbers after the decimal point), and missing required information (mandatory fields are name, description, and price). All were tested and functioned  as expected both in-app and admin panel
 
 * As a Site owner I can edit existing products so that I can change prices, sizes, and descriptions if I need to
-  - All editing functionalities were tested on the edit_product page and admin panel including mistakes like wrong prices (too many numbers after the decimal point), and missing required information (mandatory fields are name, description, and price). all tested as expected both in-app and admin panel
+  - All editing functionalities were tested on the edit_product page and admin panel including mistakes like wrong prices (too many numbers after the decimal point), and missing required information (mandatory fields are name, description, and price). All were tested and functioned as expected both in-app and admin panel
 
-* As a Site owner I can delete an item so that remove items that are no longer for sale
+* As a Site owner I can delete an item so that I can remove items that are no longer for sale
   - Removing an item was successfully tested both on the app and admin panel
 
 * As a website user I can add a review so that other users can get an honest opinion on the products
-  - The rate.html page is accessible from the reviews tab in the main navigation bar and leads to the allowed products to be reviewed by the website admin. The form was tested and the test include trying to submit a review without filling out the mandatory fields (star rating and description). Post a successful review, the review will appear on the reviews.html page
+  - The rate.html page is accessible from the reviews tab in the main navigation bar and leads to the allowed products to be reviewed by the website admin. The form was tested and the test included trying to submit a review without filling out the mandatory fields (star rating and description). Post a successful review, the review will appear on the reviews.html page
 
 * As a website user I can read reviews about products so that I can make a decision if to buy it
-  - The reviews page was tested and is working as intended. If the are reviews, they will show on the reviews.html page. If there are no reviews the page will render a message that is no current reviews and a button to return to the all products page
+  - The reviews page was tested and is working as intended. If there are reviews, they will show on the reviews.html page. If there are no reviews, the page will render a message that there are no current reviews, and a button to return to the all products page
 
-* As a website owner I can delete reviews so that I can leave just the ones I am using on the website
+* As a website owner I can delete reviews so that I can leave the ones I am using on the website
   - Deleting reviews is enabled through the admin panel and was tested successfully
 
 * As a website owner I can enable and disable the products' reviews so that I can decide which products to allow to get reviewed
@@ -623,12 +623,13 @@ All the apps' functunality is revolve around the shopping bag signals.
 ---------------------
 
 - All buttons in the app were manually tested for desktop and mobile.
-- Webhooks was tested by checking the webhooks on the Stripe website.
+- Webhooks were tested by checking the webhooks on the Stripe website.
 - Credit cards were tested by using the Stripe various card types for testing.
-- The app was tested on all main browsers (Chrome, Firefox, Explorer.
+- The app was tested on all main browsers (Chrome, Firefox, Explorer).
 - App was tested on IOS and Android.
 - A test to add an ending to the URL resulted in a 404 error and redirecting button to home.
--The website is using toast messages across all major apps. All the messages were tested and worked as intended.
+- The website is using toast messages across all major apps. All the messages were tested and worked as intended.
+
 
 <br>
 
