@@ -85,6 +85,8 @@ The main font used in the site Sans-Serif.
 
 * Similar color scheme and design throughout all pages to effectively structure, categorize and present the information to the customers.
 
+<br>
+
 * **Header**
 -----------
 ![Header image](https://github.com/tamirgen/hidow/blob/main/media/readme-header.jpg?raw=ture)
@@ -94,6 +96,8 @@ The main font used in the site Sans-Serif.
 - The business name functions as a link to the landing page.
 
 - The navigation bar is identical on all pages and contains links to all pages to facilitate navigation across the site.
+
+<br>
 
 * **The Navigation Bar**
 ------------------------
@@ -108,6 +112,8 @@ The main font used in the site Sans-Serif.
     - It contains the user's login and registration links. If the user is logged in, it contains the user's profile as well.
     - Shopping bag that stores the products that the user picked and presents the total amount of products picked so far.
 
+<br>
+
 * **Footer**
 ------------
 
@@ -119,6 +125,8 @@ The main font used in the site Sans-Serif.
 
 - All footer links will open in a new tab.
 
+<br>
+
 * **Landing Page**
 ----------------
 
@@ -129,6 +137,8 @@ The main font used in the site Sans-Serif.
 - The landing page contains the website header, 2 sections, and a footer.
 - The main section is a cover image with an H2 headline and a call-to-action button for "Shop Now".
 - The secondary section contains general information about the brand, the main benefits of using the products, and links to external links with further information.
+
+<br>
 
 * **Products page**
 ----------------------------
@@ -153,6 +163,8 @@ This page contains all the products and can be reached from the "Shop Now" butto
   * Rating
   * Image of the item
 
+<br>
+
 * **Product Details page**
 -----------------
 
@@ -173,6 +185,8 @@ The selector can be used by writing the quantity, using the +\- buttons or the u
     * ADD TO BAG- keeps the user on the same page, but updates the bag in the right top corner with the amount that was added to the bag so far.
     * KEEP SHOPPING- Sends the user back to the "ALL PRODUCTS" page. 
     * REVIEWS- Send the user to read the reviews about the product.
+
+<br>
 
 * **The Shopping Bag**
 --------------------
@@ -196,6 +210,8 @@ The selector can be used by writing the quantity, using the +\- buttons or the u
 - The bottom part of the page includes the total amount, delivery cost, the grand total, and 2 buttons.
 One button to get to the checkout ("SECURE CHECKOUT") and the other to "KEEP SHOPPING".
 
+<br>
+
 * **Checkout page**
 ------------------------------
 
@@ -210,6 +226,8 @@ One button to get to the checkout ("SECURE CHECKOUT") and the other to "KEEP SHO
 - The very bottom of the page contains 2 buttons. One is for completing the order, and the other is to adjust the shopping bag. The total amount to be charged is presented under the "Complete Order" button.
 - Clicking the "Complete Order" button will initiate a link to Stripe for completing the order.
 - Click the "Adjust Bag" button will send the user back the shopping bag for editing the order.
+
+<br>
 
 * **Thank you page**
 ------------------------------
@@ -227,6 +245,8 @@ One button to get to the checkout ("SECURE CHECKOUT") and the other to "KEEP SHO
 " Your order information is below. A confirmation email will be sent to {user email}."
 - At the bottom of the form there is a call-to-action button that offers the user to check out the latest deal called "NOW CHECK OUT THE LATEST DEALS". The button will send the user to a page with products selected by the admin from any category he would like.
 
+<br>
+
 * **Write a review**
 ----------------------
 
@@ -237,6 +257,8 @@ One button to get to the checkout ("SECURE CHECKOUT") and the other to "KEEP SHO
 - The page contains products that were pre-approved by the admin to be eligible for getting a review.
 - The page is accessed through the "REVIEW" tab from the main navigation bar.
 - Every product in that section has an image, title, short description, and a button called "RATE NOW" that redirects to the review form.
+
+<br>
 
 * **Review form**
 ----------------------
@@ -252,6 +274,7 @@ One button to get to the checkout ("SECURE CHECKOUT") and the other to "KEEP SHO
 - Once the form is complete, the user submits the review using the "RATE NOW" button.
 - After submitting the form, the user will be redirected to a thank you page that has a "BACK TO OUR HOME PAGE" button and a "Thank you. Your review will be checked by the website owner." massage.
 
+<br>
 
 * **My Profile**
 ----------------------
@@ -269,6 +292,8 @@ One button to get to the checkout ("SECURE CHECKOUT") and the other to "KEEP SHO
 
 ### Admin Features
 ------------------
+
+<br>
 
 * **In the App**
 ----------------
@@ -296,6 +321,7 @@ Green- means that the review is disabled.
 
 ![Enable\disable reviews](https://github.com/tamirgen/hidow/blob/main/media/readme-enable-disable-review.jpg?raw=true)
 
+<br>
 
 * **Admin panel**
 -----------------
@@ -602,6 +628,7 @@ All the apps' functunality is revolve around the shopping bag signals.
 - The app was tested on all main browsers (Chrome, Firefox, Explorer.
 - App was tested on IOS and Android.
 - A test to add an ending to the URL resulted in a 404 error and redirecting button to home.
+-The website is using toast messages across all major apps. All the messages were tested and worked as intended.
 
 <br>
 
@@ -626,6 +653,8 @@ In addition, an admin can delete a product and enable\disable reviews from the a
 ## Bugs
 --------
 - In production, the CSS files were not loading. That was due to the fact that DEBUG was set to True. Changing it to False and pushing again fixed the issue.
+
+- The toasts massages were not loading due to incorrect placement of Mailchimp js files. Moving the Mailchimp files to the bottom of the template solved the issue.
 
 <br>
 
