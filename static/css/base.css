@@ -46,6 +46,11 @@ footer {
     margin-top: 100px;
 }
 
+.about-us h3, p {
+    display: flex;
+    flex-direction: column
+}
+
 
 
 /* from Bulma */
