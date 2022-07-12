@@ -15,7 +15,7 @@
 <div class="card-group">
     {% for review in reviews %}
         <div class="card-deck col-sm-6 col-md-6 col-lg-4 col-xl-3">
-            <div class="card border-0 h-100">
+            <div class="card-body border-0">
                 <h4 class="card-title text-black">Reviewer: {{ review.author}}</h4>
                 <h5 class="card-subtitle mb-2 text-black">Stars: {{ review.stars }}</h5>
                 <div class="card-text text-black">

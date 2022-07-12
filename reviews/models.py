@@ -19,7 +19,7 @@ class Products(models.Model):
 
 
 class Review(models.Model):
-    author = models.CharField(max_length=40, default="anonymous")
+    author = models.CharField(max_length=40, null=True, blank=False)
     review_date = models.DateTimeField(default=timezone.now)
     rate_choices = (
         (1, 1),
@@ -28,7 +28,7 @@ class Review(models.Model):
         (4, 4),
         (5, 5)
     )
-    stars = models.IntegerField(choices=rate_choices)
+    stars = models.IntegerField(choices=rate_choices, blank=False)
     comment = models.TextField(max_length=4000)
     product = models.ForeignKey(Products, on_delete=models.CASCADE)
 

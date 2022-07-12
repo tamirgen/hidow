@@ -192,3 +192,4 @@ def get_reviews(request, product_id):
             return render(request, "products/no-review.html", context)
     except:
         return render(request, "products/no-review.html")
+

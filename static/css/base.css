@@ -36,11 +36,24 @@ footer {
     justify-content: space-between;
 }
 
-.card-group {
+.no-review h2 {
+    display: flex;
+    color: black;
+    font-weight: 400;
+    padding-top: 5px;
+    text-align: center;
+}
+
+.no-review h4 {
+    display: flex;
+    text-align: center;
+}
+
+.card-body {
     position: relative;
 }
 
-.card-group button {
+.card-body button {
     position: absolute;
     bottom: 5px;
     margin-top: 100px;

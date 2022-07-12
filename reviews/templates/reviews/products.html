@@ -24,6 +24,8 @@
                         <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png" alt="{{ product.name }}">
                     </a>
                     {% endif %}
+                </div>
+                <div class="card-body">
                     <p>{{ item.description }}</p>
                     <button><a href="{% url 'rate' item.id %}">RATE NOW</a></button>
                 </div>
