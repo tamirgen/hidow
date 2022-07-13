@@ -29,7 +29,6 @@ urlpatterns = [
     path('checkout/', include('checkout.urls')),
     path('profile/', include('profiles.urls')),
     path('reviews/', include('reviews.urls')),
-    path('warranty/', include('warranty.urls')),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
 handler404 = 'hidow.views.handler404'
