@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block page_header %}
+    <div class="container header-container">
+        <div class="row">
+            <div class="col"></div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block content %}
+    <div class="overlay"></div>
+    <h2 class="text-black text-center" style="padding-top: 20px;">Add a product review</h2>
+    <div class="container-fluid">
+        <div class="row justify-content-center">
+            <div class="col-12 col-md-6 col-lg-4 offset-lg-2">
+                <div class="form-group row text-black">
+                    <form method="POST">
+                        {% csrf_token %}
+                        {{ form.as_p }}
+                        <button  class="btn btn-primary" type="submit">RATE NOW</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock content %} 

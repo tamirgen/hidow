@@ -3,7 +3,7 @@ from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from django.db.models import Q
 from .models import Product, Category
-from reviews.models import Review
+from reviews.models import Review, Products
 from django.db.models.functions import Lower
 
 from .forms import ProductForm
@@ -155,6 +155,7 @@ def enable_rating(request, product_id):
     if not request.user.is_superuser:
         messages.error(request, 'Sorry, only store owners can do that.')
         return redirect(reverse('home'))
+        
     product = get_object_or_404(Product, pk=product_id)
     product.enable_rating = True
     product.save()
@@ -192,4 +193,3 @@ def get_reviews(request, product_id):
             return render(request, "products/no-review.html", context)
     except:
         return render(request, "products/no-review.html")
-
