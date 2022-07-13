@@ -3,7 +3,7 @@ html {
 }
 
 body {
-    background: url('/media/pexels-pixabay-34514.jpg') no-repeat center center fixed;
+    background: url('/media/pexels-pixabay-34514.jpg') no-repeat center center;
     background-size: cover;    
     height: calc(100vh - 164px);
     color: #555;
@@ -68,7 +68,6 @@ footer {
     display: flex;
     flex-direction: column
 }
-
 
 
 /* from Bulma */
