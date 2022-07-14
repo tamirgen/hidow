@@ -77,7 +77,12 @@ def product_detail(request, product_id):
         'reviews': reviews
     }
 
-    return render(request, 'products/product_detail.html', context)
+    if reviews:
+        return render(request, 'products/product_detail_2.html', context)
+    else:
+        return render(request, 'products/product_detail_1.html', context) 
+
+    
 
 
 @login_required

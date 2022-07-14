@@ -90,12 +90,6 @@
                                 </div>
                             </div>
                         </div>
-
-                        <div>
-                            <a href="{% url 'get_reviews' product.id %}" class="btn btn-outline-black rounded-0 mt-5">
-                                <span class="text-uppercase">Reviews</span>
-                            </a>
-                        </div>
                         <div class="col{% if s %}-12 mt-2{% endif %}">
                             <a href="{% url 'products' %}" class="btn btn-outline-black rounded-0 mt-5">
                                 <span class="icon">
@@ -115,46 +109,19 @@
 </div>
 <div class="overlay"></div>
 <h3 class="text-center text-black" style="padding-top: 20px;">PRODUCT REVIEWS</h3>
-<div class="d-flex flex-column align-items-center">
-    {% for review in reviews %}
-        <div class="p-2 col-sm-6 col-md-6 col-lg-4 col-xl-3">
-            <div class="card-body border-bottom 1">
-                <h4 class="card-title text-black text-center">Reviewer: {{ review.author}}</h4>
-                <h5 class="card-subtitle mb-2 text-black text-center">Stars: {{ review.stars }}</h5>
-                <div class="card-text text-black">
-                    <p class="h-100 text-black text-center"><strong>Comment:</strong>
-                        <br>
-                        {{ review.comment }}
-                    </p>
-                </div>
-                <br>
-                <div class="d-flex flex-column align-items-center">
-                    <button><a href="{% url 'products'  %}">Back to products</a></button>
-                </div>
-            </div>
-        </div>
-        {% if forloop.counter|divisibleby:1 %}
-        <div class="col-12 d-sm-none mb-5">
-            <hr>
-        </div>
-        {% endif %}                        
-        {% if forloop.counter|divisibleby:2 %}
-            <div class="col-12 d-none d-sm-block d-md-block d-lg-none mb-5">
-                <hr>
-            </div>
-        {% endif %}
-        {% if forloop.counter|divisibleby:3 %}
-            <div class="col-12 d-none d-lg-block d-xl-none mb-5">
-                <hr>
-            </div>
-        {% endif %}
-        {% if forloop.counter|divisibleby:4 %}
-            <div class="col-12 d-none d-xl-block mb-5">
-                <hr>
-            </div>
-        {% endif %}
-    {% endfor %}
-</div>
+<div class="col text-center">
+    <h4>We are sorry...
+        This Product doesn't have any reviews yet.
+    </h4>
+    <br>
+    <h4>
+        <a href="{% url 'products' %}" 
+            class="shop-now-button btn btn-sm rounded-0 text-uppercase py-3">
+                Return to shop
+        </a>
+    </h4>
+    
+</div>   
 {% endblock %}
 
 {% block postloadjs %}
