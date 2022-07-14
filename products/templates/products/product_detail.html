@@ -114,21 +114,23 @@
     </div>
 </div>
 <div class="overlay"></div>
-<h2 class="text-center text-black" style="padding-top: 20px;">PRODUCT REVIEWS</h2>
-<div class="card-group">
+<h3 class="text-center text-black" style="padding-top: 20px;">PRODUCT REVIEWS</h3>
+<div class="d-flex flex-column align-items-center">
     {% for review in reviews %}
-        <div class="card-deck col-sm-6 col-md-6 col-lg-4 col-xl-3">
-            <div class="card-body border-0">
-                <h4 class="card-title text-black">Reviewer: {{ review.author}}</h4>
-                <h5 class="card-subtitle mb-2 text-black">Stars: {{ review.stars }}</h5>
+        <div class="p-2 col-sm-6 col-md-6 col-lg-4 col-xl-3">
+            <div class="card-body border-bottom 1">
+                <h4 class="card-title text-black text-center">Reviewer: {{ review.author}}</h4>
+                <h5 class="card-subtitle mb-2 text-black text-center">Stars: {{ review.stars }}</h5>
                 <div class="card-text text-black">
-                    <p class="h-100 text-black"><strong>Comment:</strong>
+                    <p class="h-100 text-black text-center"><strong>Comment:</strong>
                         <br>
                         {{ review.comment }}
                     </p>
                 </div>
                 <br>
-                <button><a href="{% url 'products'  %}">Back to products</a></button>
+                <div class="d-flex flex-column align-items-center">
+                    <button><a href="{% url 'products'  %}">Back to products</a></button>
+                </div>
             </div>
         </div>
         {% if forloop.counter|divisibleby:1 %}
