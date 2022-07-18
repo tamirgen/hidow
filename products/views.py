@@ -69,14 +69,18 @@ def product_detail(request, product_id):
     """ A view to show individual product details """
 
     product = get_object_or_404(Product, pk=product_id)
-    productRating = get_object_or_404(Products, productId=product_id)
-    reviews = Review.objects.all().filter(product=productRating)
- 
+    reviews=[]
+    try:
+       productRating = Products.objects.get(productId=product_id)
+       reviews = Review.objects.filter(product=productRating)
+    except Products.DoesNotExist:   
+       reviews=[]
+    
     context = {
         'product': product,
         'reviews': reviews
     }
-
+    
     if reviews:
         return render(request, 'products/product_detail_2.html', context)
     else:
