@@ -27,7 +27,8 @@
                 </div>
                 <div class="card-body">
                     <p>{{ item.description }}</p>
-                    <button><a href="{% url 'rate' item.id %}">RATE NOW</a></button>
+                    <br>
+                    <button class="btn btn-black btn-sm"><a href="{% url 'rate' item.id %}" style="color: white;">RATE NOW</a></button>
                 </div>
             </div>
             {% if forloop.counter|divisibleby:1 %}
