@@ -15,7 +15,7 @@
     <div class="card-group">
         {% for item in items %}
             <div class="card-deck col-sm-6 col-md-6 col-lg-4 col-xl-3">
-                <div class="card border-0">
+                <div class="card border-0 text-center">
                     <h5 class="text-center">{{ item.name}}</h5>
                     {% if item.image %}
                     <img class="h-75" src="{{ item.image.url }}" alt="product image">
@@ -25,7 +25,9 @@
                     </a>
                     {% endif %}
                     <br>
-                    <button class="btn btn-black btn-sm w-50"><a href="{% url 'rate' item.id %}" style="color: white;">RATE NOW</a></button>
+                    <div class="d-flex justify-content-center">
+                        <button class="btn btn-black btn-sm w-50"><a href="{% url 'rate' item.id %}" style="color: white;">RATE NOW</a></button>
+                    </div>
                 </div>
             </div>
             {% if forloop.counter|divisibleby:1 %}
