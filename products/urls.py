@@ -13,4 +13,7 @@ urlpatterns = [
     path('disable-rating/<int:product_id>/', views.disable_rating,
          name='disable_rating'),
     path('get_reviews/<int:product_id>/', views.get_reviews, name='get_reviews'),
+    path('products-for-rates', views.products_for_rate, name="products-reviews"),
+    path('success', views.success, name="success"),
+    path('rate/<int:id>', views.rate, name="rate"),
 ]

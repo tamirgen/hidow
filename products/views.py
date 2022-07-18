@@ -2,10 +2,9 @@ from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from django.db.models import Q
-from .models import Product, Category
-from reviews.models import Review, Products
+from .models import Product, Category, Review
 from django.db.models.functions import Lower
-
+from .forms import ReviewForm
 from .forms import ProductForm
 
 # Create your views here.
@@ -71,8 +70,7 @@ def product_detail(request, product_id):
     product = get_object_or_404(Product, pk=product_id)
     reviews=[]
     try:
-       productRating = Products.objects.get(productId=product_id)
-       reviews = Review.objects.filter(product=productRating)
+       reviews = Review.objects.filter(product=product)
     except Products.DoesNotExist:   
        reviews=[]
     
@@ -172,9 +170,6 @@ def enable_rating(request, product_id):
     product = get_object_or_404(Product, pk=product_id)
     product.enable_rating = True
     product.save()
-    Products.objects.create(name=product.name, productId=product_id,
-                            description=product.description,
-                            rating=product.rating, image=product.image)
     return redirect(reverse('products'))
 
 
@@ -187,21 +182,57 @@ def disable_rating(request, product_id):
     product = get_object_or_404(Product, pk=product_id)
     product.enable_rating = False
     product.save()
-    productRating = get_object_or_404(Products, productId=product_id)
-    productRating.delete()
     return redirect(reverse('products'))
 
 
 def get_reviews(request, product_id):
-    "A view to dispaly reviews for the products"
+    pass
+#     "A view to dispaly reviews for the products"
 
-    product = get_object_or_404(Product, pk=product_id)
-    productRating = get_object_or_404(Products, productId=product_id)
-    reviews = Review.objects.all().filter(product=productRating)
+#     product = get_object_or_404(Product, pk=product_id)
+#     productRating = get_object_or_404(Products, productId=product_id)
+#     reviews = Review.objects.all().filter(product=productRating)
+#     context = {
+#         'reviews': reviews
+#     }
+#     if reviews:
+#         return render(request, "products/product_detail_2.html", context)
+#     else:
+#         return render(request, "products/product_detail_1.html", context)
+
+
+def products_for_rate(request):
+    " A view to get render the products to be reviewed"
+    items = Product.objects.filter(enable_rating=True)
     context = {
-        'reviews': reviews
+        'items': items
     }
-    if reviews:
-        return render(request, "products/product_detail_2.html", context)
-    else:
-        return render(request, "products/product_detail_1.html", context)
+
+    return render(request, "products/reviews/products.html", context)
+
+
+def rate(request, id):
+    " A view to present the rate form and to redirect to thank you page"
+    post = Product.objects.get(id=id)
+    form = ReviewForm(request.POST or None)
+    if form.is_valid():
+        author = request.POST.get('author')
+        stars = request.POST.get('stars')
+        comment = request.POST.get('comment')
+        review = Review(author=author, stars=stars,  comment=comment,
+                        product=post)
+        review.save()
+        return redirect('success')
+
+    form = ReviewForm()
+    context = {
+        "form": form
+
+    }
+    return render(request, 'products/reviews/rate.html', context)
+
+
+def success(request):
+    " A view to render the thank you page"
+    return render(request, "products/reviews/success.html")
+
