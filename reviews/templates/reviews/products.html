@@ -16,19 +16,16 @@
         {% for item in items %}
             <div class="card-deck col-sm-6 col-md-6 col-lg-4 col-xl-3">
                 <div class="card border-0">
-                    <h3>{{ item.name}}</h3>
+                    <h5 class="text-center">{{ item.name}}</h5>
                     {% if item.image %}
-                    <img src="{{ item.image.url }}" alt="product image">
+                    <img class="h-75" src="{{ item.image.url }}" alt="product image">
                     {% else %}
                     <a href="">
                         <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png" alt="{{ product.name }}">
                     </a>
                     {% endif %}
-                </div>
-                <div class="card-body">
-                    <p>{{ item.description }}</p>
                     <br>
-                    <button class="btn btn-black btn-sm"><a href="{% url 'rate' item.id %}" style="color: white;">RATE NOW</a></button>
+                    <button class="btn btn-black btn-sm w-50"><a href="{% url 'rate' item.id %}" style="color: white;">RATE NOW</a></button>
                 </div>
             </div>
             {% if forloop.counter|divisibleby:1 %}
