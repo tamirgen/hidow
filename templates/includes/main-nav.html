@@ -46,11 +46,12 @@
         </li>
 
         <li class="nav-item dropdown">
-            <a class="logo-font font-weight-bold nav-link" href="#" id="lifetime_warranty-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <a class="logo-font font-weight-bold nav-link text-danger" href="#" id="lifetime_warranty-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Lifetime Warranty
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="lifetime_warranty-link">
-                <a href="{% url 'products' %}?category=lifetime_warranty" class="dropdown-item">Lifetime Warranty</a>
+                <a href="{% url 'products' %}?category=lifetime_warranty" class="dropdown-item">Lifetime Warranty Card</a>
+                <a href="{% url 'add-warranty' %}" class="dropdown-item text-danger">Warranty Registration</a>
             </div>
         </li>
 

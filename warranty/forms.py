@@ -6,4 +6,5 @@ class WarrantyRegistrationForm(forms.ModelForm):
     
     class Meta:
         model = WarrantyRegistration
-        fields = ("full_name", "email", "country", "postcode", "city", "street_address1", "street_address2", "products")
+        fields = ("full_name", "email", "country", "postcode", 
+                  "city", "street_address1", "street_address2", "products")

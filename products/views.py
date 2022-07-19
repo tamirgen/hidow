@@ -65,7 +65,8 @@ def all_products(request):
 
 
 def product_detail(request, product_id):
-    """ A view to show individual product details """
+    """ A view to show individual product details 
+        and to show reviews if there are any """
 
     product = get_object_or_404(Product, pk=product_id)
     reviews=[]
@@ -183,23 +184,6 @@ def disable_rating(request, product_id):
     product.enable_rating = False
     product.save()
     return redirect(reverse('products'))
-
-
-def get_reviews(request, product_id):
-    pass
-#     "A view to dispaly reviews for the products"
-
-#     product = get_object_or_404(Product, pk=product_id)
-#     productRating = get_object_or_404(Products, productId=product_id)
-#     reviews = Review.objects.all().filter(product=productRating)
-#     context = {
-#         'reviews': reviews
-#     }
-#     if reviews:
-#         return render(request, "products/product_detail_2.html", context)
-#     else:
-#         return render(request, "products/product_detail_1.html", context)
-
 
 def products_for_rate(request):
     " A view to get render the products to be reviewed"
