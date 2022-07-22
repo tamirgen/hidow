@@ -1,0 +1,17 @@
+Hello {{ warranty.full_name }}!
+
+This is a confirmation of your warranty activation at Hidow Germany. Your registration information is below:
+
+Product\s registered: {{ warranty.products }}
+Registration Date: {{ warranty.date }}
+
+All registered products are covered by Hidow Germany limited lifetime warranty.
+For warranty issues, please contact us at {{ contact_email }}.
+
+If you have any questions, feel free to contact us at {{ contact_email }}.
+
+Thank you for your registration!
+
+Sincerely,
+
+Hidow Germany
