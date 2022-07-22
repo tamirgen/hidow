@@ -38,7 +38,7 @@ def add_warranty(request):
             'contact_email': 'support@hidowgeremany.com'
         })
 
-        response = send_mail('Warranty Registarion - hidow', 'This is the message',
+        response = send_mail('Warranty Registarion - Hidow Germany', 'This is the message',
                              'noreply@hidowgeremany.com', [email], html_message=html)
         print(response)
         return redirect('registration_success')
