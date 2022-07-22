@@ -13,5 +13,8 @@ class WarrantyRegistration(models.Model):
     street_address2 = models.CharField(max_length=80, null=True, blank=True)
     date = models.DateTimeField(auto_now_add=True)
     products = models.ManyToManyField(Product)
+    quantity = models.PositiveIntegerField(null=False)
+
     def __str__(self):
         return self.full_name
+
