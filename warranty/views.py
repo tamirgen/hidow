@@ -6,12 +6,11 @@ from .models import WarrantyRegistration
 from django.core.mail import send_mail
 from django.template.loader import render_to_string
 
-# Create your views here.
-
-# shift+alt+f beautifer
-
 
 def add_warranty(request):
+    """ A view to add details for warranty registration and to send 
+        a confirmation email"""
+        
     form = WarrantyRegistrationForm(request.POST or None)
     if form.is_valid():
         fullName = request.POST["full_name"]
