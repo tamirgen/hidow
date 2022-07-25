@@ -194,13 +194,13 @@ def products_for_rate(request):
 
 
 def rate(request, id):
-    " A view to present the rate form and to redirect to thank you page"
     post = Product.objects.get(id=id)
     form = ReviewForm(request.POST or None)
+    
     if form.is_valid():
-        author = request.POST.get('author')
-        stars = request.POST.get('stars')
-        comment = request.POST.get('comment')
+        author = request.POST['author']
+        stars = request.POST['stars']
+        comment = request.POST['comment']
         review = Review(author=author, stars=stars,  comment=comment,
                         product=post)
         review.save()
@@ -208,8 +208,8 @@ def rate(request, id):
 
     form = ReviewForm()
     context = {
-        "form": form
-
+        "form": form,
+        "id": id
     }
     return render(request, 'products/reviews/rate.html', context)
 
