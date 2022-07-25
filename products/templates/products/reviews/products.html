@@ -26,7 +26,10 @@
                     {% endif %}
                     <br>
                     <div class="d-flex justify-content-center">
-                        <a href="{% url 'rate' item.id %}" style="color: black;">RATE NOW</a>
+                        <!-- <a href="{% url 'rate' item.id %}" style="color: black;">RATE NOW</a> -->
+                        <a href="{% url 'rate' item.id %}" class="btn-sm btn-black rounded-0 my-2">
+                            <span class="text-uppercase">Rate Now</span>
+                        </a>
                     </div>
                 </div>
             </div>

@@ -19,7 +19,9 @@
                     <form method="POST">
                         {% csrf_token %}
                         {{ form.as_p }}
-                        <button class="btn btn-outline-black btn-sm" type="submit">RATE NOW</button>
+                        <a href="{% url 'success' %}" class="btn-sm btn-black rounded-0 my-2">
+                            <span class="text-uppercase">Submit your review</span>
+                        </a>
                     </form>
                 </div>
             </div>
