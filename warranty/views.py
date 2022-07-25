@@ -24,34 +24,46 @@ def add_warranty(request):
         products = request.POST["products"]
         quantity = request.POST["quantity"]
 
-        warranty = WarrantyRegistration(full_name=fullName, email=email, country=country, postcode=postcode,
-                                        city=city, street_address1=street_address1, street_address2=street_address2,
-                                        quantity=quantity)
+        warranty = WarrantyRegistration(
+            full_name=fullName,
+            email=email,
+            country=country,
+            postcode=postcode,
+            city=city,
+            street_address1=street_address1,
+            street_address2=street_address2,
+            quantity=quantity,
+        )
 
         id = int(products)
         specificProduct = Product.objects.get(pk=id)
         warranty.save()
         warranty.products.add(specificProduct)
-        html = render_to_string('warranty/confirmation_email/registration_confirm_email_body.html', {
-            'warranty': warranty,
-            'product': specificProduct.name,
-            'contact_email': 'support@hidowgeremany.com'
-        })
+        html = render_to_string(
+            "warranty/confirmation_email/registration_confirm_email_body.html",
+            {
+                "warranty": warranty,
+                "product": specificProduct.name,
+                "contact_email": "support@hidowgeremany.com",
+            },
+        )
 
-        response = send_mail('Warranty Registarion - Hidow Germany', 'This is the message',
-                             'noreply@hidowgeremany.com', [email], html_message=html)
+        response = send_mail(
+            "Warranty Registarion - Hidow Germany",
+            "This is the message",
+            "noreply@hidowgeremany.com",
+            [email],
+            html_message=html,
+        )
         print(response)
-        return redirect('registration_success')
+        return redirect("registration_success")
 
     form = WarrantyRegistrationForm()
 
-    context = {
-        "form": form
-
-    }
-    return render(request, 'warranty/registration.html', context)
+    context = {"form": form}
+    return render(request, "warranty/registration.html", context)
 
 
 def registration_success(request):
-    " A view to render the thank you page"
+    "A view to render the thank you page"
     return render(request, "warranty/success.html")

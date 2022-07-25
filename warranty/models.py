@@ -2,8 +2,9 @@ from django.db import models
 from django_countries.fields import CountryField
 from products.models import Product
 
+
 class WarrantyRegistration(models.Model):
-    
+
     full_name = models.CharField(max_length=50, null=False, blank=False)
     email = models.EmailField(max_length=254, null=False, blank=False)
     country = CountryField(blank_label='Country *', null=False, blank=False)
@@ -17,4 +18,3 @@ class WarrantyRegistration(models.Model):
 
     def __str__(self):
         return self.full_name
-

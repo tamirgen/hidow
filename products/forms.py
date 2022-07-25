@@ -2,11 +2,13 @@ from django import forms
 from .widgets import CustomClearableFileInput
 from .models import Product, Category, Review
 
+
 class ReviewForm(forms.ModelForm):
 
     class Meta:
         model = Review
         fields = ("author", "stars", "comment")
+    
 
 class ProductForm(forms.ModelForm):
 

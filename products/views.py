@@ -47,7 +47,7 @@ def all_products(request):
                 messages.error(request,
                                "You didn't enter any search criteria!")
                 return redirect(reverse('products'))
-      
+
             queries = (Q(name__icontains=query) |
                        Q(description__icontains=query))
             products = products.filter(queries)
@@ -65,28 +65,25 @@ def all_products(request):
 
 
 def product_detail(request, product_id):
-    """ A view to show individual product details 
+    """ A view to show individual product details
         and to show reviews if there are any """
 
     product = get_object_or_404(Product, pk=product_id)
-    reviews=[]
+    reviews = []
     try:
-       reviews = Review.objects.filter(product=product)
-    except Products.DoesNotExist:   
-       reviews=[]
-    
+        reviews = Review.objects.filter(product=product)
+    except Products.DoesNotExist:
+        reviews = []
+
     context = {
         'product': product,
         'reviews': reviews
     }
-    
+
     if reviews:
         return render(request, 'products/product_detail_2.html', context)
     else:
         return render(request, 'products/product_detail_1.html', context)
-        
-
-    
 
 
 @login_required
@@ -167,7 +164,7 @@ def enable_rating(request, product_id):
     if not request.user.is_superuser:
         messages.error(request, 'Sorry, only store owners can do that.')
         return redirect(reverse('home'))
-        
+
     product = get_object_or_404(Product, pk=product_id)
     product.enable_rating = True
     product.save()
@@ -184,6 +181,7 @@ def disable_rating(request, product_id):
     product.enable_rating = False
     product.save()
     return redirect(reverse('products'))
+
 
 def products_for_rate(request):
     " A view to get render the products to be reviewed"
@@ -219,4 +217,3 @@ def rate(request, id):
 def success(request):
     " A view to render the thank you page"
     return render(request, "products/reviews/success.html")
-
