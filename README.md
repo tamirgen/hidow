@@ -10,9 +10,16 @@ In addition, the website allows to read and write reviews about selected product
 
 [Here is a link to the live version of the App](https://hidow.herokuapp.com/)
 
-![Responsive Mockup](https://github.com/tamirgen/hidow/blob/main/media/mocup-Hidow.jpg?raw=true)
+![Responsive Mockup](https://github.com/tamirgen/hidow/blob/main/media/hidow-responsive-new.jpg?raw=true)
 
 <br>
+
+## Wireframe & Appliction flow
+------------------------------
+
+![Wireframe](https://github.com/tamirgen/hidow/blob/main/media/wireframe-map%20(2).png?raw=true)
+
+![Flow chart](https://github.com/tamirgen/hidow/blob/main/media/wireframe-map%20(1).png?raw=true)
 
 ## User Experience (UX)
 ----------------------
@@ -283,6 +290,15 @@ One button to get to the checkout ("SECURE CHECKOUT") and the other to "KEEP SHO
 - Once the form is complete, the user submits the review using the "RATE NOW" button.
 - After submitting the form, the user will be redirected to a thank you page that has a "BACK TO OUR HOME PAGE" button and a "Thank you. Your review will be checked by the website owner." massage.
 
+* **Write a review thank you page**
+----------------------------------
+
+![Write a review thank you page](https://github.com/tamirgen/hidow/blob/main/media/readme-review-form.jpg?raw=true)
+
+The thank you page has a thank you headline and in body the message is: "Your review will be checked by the website owner."
+Under the message, there is a "BACK TO OUR HOME PAGE" button.
+
+
 <br>
 
 * **My Profile**
@@ -496,6 +512,13 @@ All the apps' functunality is revolved around the shopping bag signals.
     * The app has 2 views:
       - "add_warranty" is in charge of validating the registration form, collecting the data, adding the data to the DB, and sending a confirmation email to the client.
       - "success" is a view to render the thank you page.
+
+### Database ER Diagram
+-----------------------
+
+<br>
+
+![ER Diagram](https://github.com/tamirgen/hidow/blob/main/media/er-diagram-hidow.jpg?raw=true)
 
 
 <br>
