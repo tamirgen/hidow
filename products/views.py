@@ -194,6 +194,7 @@ def products_for_rate(request):
 
 
 def rate(request, id):
+    "A view to validate the form and if valid, submit and save the review"
     post = Product.objects.get(id=id)
     form = ReviewForm(request.POST or None)
     

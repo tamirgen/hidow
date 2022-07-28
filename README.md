@@ -54,7 +54,8 @@ In addition, the website allows to read and write reviews about selected product
 * As a website user I can read reviews about products so that I can make a decision if to buy it
 * As a website owner I can delete reviews so that I can leave the ones I am using on the website
 * As a website owner I can enable and disable the products' reviews so that I can decide which products to allow getting reviewed
-
+* As a client, I can activate my warranty for the products so that if I have a warranty issue with a product I will be able to get it fixed
+* As a website owner, I can see a list of warranty registered clients so that I can provide warranty solutions to registered clients
 <br>
 
 ### Color Scheme
@@ -65,6 +66,7 @@ The colors used on the site are three different ones:
 * The buttons and links are blue, light blue for positive actions, like updating orders and rating a product. They are white and black for standard actions like go to reviews or adding to bag and are red for removing a product from bag.
 I have chosen those basic colors as for me they represent luxury and high-end products like the brand I have chosen to create the App for.
 Those colors were also chosen to give the user good contrast between the background and text.
+The hero image is black and white for elegant effect and prestige.
 
 <br>
 
@@ -185,6 +187,15 @@ The selector can be used by writing the quantity, using the +\- buttons or the u
     * ADD TO BAG- keeps the user on the same page, but updates the bag in the right top corner with the amount that was added to the bag so far.
     * KEEP SHOPPING- Sends the user back to the "ALL PRODUCTS" page. 
     * REVIEWS- Send the user to read the reviews about the product.
+- Product Reviews:
+    * The reviews part has 2 options:
+      - If there is are reviews, they will show under the main section:
+
+      ![product reviews-when there are reviews](https://github.com/tamirgen/hidow/blob/main/media/readme-product-bottom.jpg?raw=true)
+
+      - If there are no reviews, a massage will appear stating: "We are sorry... This Product doesn't have any reviews yet."
+
+        ![product reviews-when there are no reviews](https://github.com/tamirgen/hidow/blob/main/media/readme-product-bottom.jpg?raw=true)
 
 <br>
 
@@ -250,13 +261,11 @@ One button to get to the checkout ("SECURE CHECKOUT") and the other to "KEEP SHO
 * **Write a review**
 ----------------------
 
-![Write a review top](https://github.com/tamirgen/hidow/blob/main/media/readme-write-review-top.jpg?raw=true)
-
-![Write a review bottom](https://github.com/tamirgen/hidow/blob/main/media/readme-write-review-bottom.jpg?raw=true)
+![Write a review](https://github.com/tamirgen/hidow/blob/main/media/readme-write-review-top.jpg?raw=true)
 
 - The page contains products that were pre-approved by the admin to be eligible for getting a review.
 - The page is accessed through the "REVIEW" tab from the main navigation bar.
-- Every product in that section has an image, title, short description, and a button called "RATE NOW" that redirects to the review form.
+- Every product in that section has an image, title, and a button called "RATE NOW" that redirects to the review form.
 
 <br>
 
@@ -279,9 +288,9 @@ One button to get to the checkout ("SECURE CHECKOUT") and the other to "KEEP SHO
 * **My Profile**
 ----------------------
 
-![Profile top](https://github.com/tamirgen/hidow/blob/main/media/readme-profile.jpg?raw=true)
+![Profile](https://github.com/tamirgen/hidow/blob/main/media/readme-profile.jpg?raw=true)
 
-![Profile bottom](https://github.com/tamirgen/hidow/blob/main/media/readme-profile.jpg?raw=true)
+
 
 - The page contains 2 sections:
     - Profile information: The information extracted at the checkout page, if the user created an account or has an account, is stored on the left side of the page.
@@ -338,11 +347,10 @@ The Admin panel includes the following sections:
  - PRODUCTS- this section has two models in use:
     - Categories: the admin can view, add, remove and edit any category in the section.
     - Products: the admin can view, add, remove and edit any product in the section.
-
-- REVIEWS- this section has two models in use:
-    - Products: the admin can view, add, remove and edit any product in the section.
     - Reviews: the admin can view, add, remove and edit any review in the section.
-    - Reviews: 
+
+- Warranty- this section has one model:
+    - Warranty registrations: the admin can view, add, remove and edit any registration in the section.
 
 ![admin panel](https://github.com/tamirgen/hidow/blob/main/media/readme-admin-panel.jpg?raw=true)
 
@@ -375,6 +383,9 @@ The Admin panel includes the following sections:
 
 * [Balsamiq](https://balsamiq.com/)
      - Balsamiq was used to create the wireframes during the design phase of the project.
+
+* [Lucidchart](https://www.lucidchart.com/)
+  - Lucidchart was used to create the ER Diagram of the DB in the project.
 
 * [Am I Responsive?](http://ami.responsivedesign.is/#)
     - Am I Responsive was used to get a responsive design throughout the process and to generate mockup imagery to be used.
@@ -449,19 +460,23 @@ All the apps' functunality is revolved around the shopping bag signals.
 
 - The products app:
 
-    * The app has 2 models:
+    * The app has 3 models:
       - The Category model collects and stores the product's name and friendly name.
       - The Product model that stores the product's category, SKU, description, size, price, rating, image URL, image, and reviews enabled\disabled.
+      - The Review model stores the form details used to create a review and has the author name, review date, rate choices, stars, comment, and a product to associate the review with.
 
-    * The app has 8 views:
+    * The app has 10 views:
       - "all_products"- A view to show all products, including sorting and search queries.
-      - "product_detail"- A view to show individual product details.
+      - "product_detail"- A view to show individual product details and reviews, if there are any.
       - "add_produc"- A view to add a product to the store.
       - "edit_produc"- A view to edit a product in the store.
       - "delet_produc"- A view to delete a product from the store.
       - "enable_rating"- A view to enable reviewing a product.
-      - "disable_ratin"- A view to disable reviewing a product.
-      - "get_reviews"- A view to display reviews for the products.
+      - "disable_rating"- A view to disable reviewing a product.
+      - "products_for_rate"- A view to filter and display products that are eligible for reviews.
+      - "rate"- A view to validate the form and if valid, submit and save the review.
+      - "success"- A view transferring users to a thank you page after submitting a review.
+
 
     * The app is using the Products and Reviews models from the reviews app.
 
@@ -473,16 +488,15 @@ All the apps' functunality is revolved around the shopping bag signals.
       - The "profile" view is in charge of rendering the user's profile in the "MY PROFILE" page. In addition, it will present profile changes and past orders.
       - The "order_history" will present and render specific orders from the past orders stored on the database.
 
- - The reviews app:
+- The warranty app:
 
-    * The reviews app has 2 models:
-      - The Products model stores data that includes name, description, rating, image, and product id.
-      - The Review model stores the review's author, review date, rating 1-5 stars, comment, and product.
-
-    * The app has 3 views:
-      - "products" is in charge of rendering the products to be reviewed.
-      - "rate" is a view to present the rate form and to redirect to the thank you page.
+    * The warranty app has 1 model:
+      - The Warranty registration model stores data that includes full name, email, addresses (address 1, address 2, postcode, city or town, county, and country), date, products, and quantities.
+     
+    * The app has 2 views:
+      - "add_warranty" is in charge of validating the registration form, collecting the data, adding the data to the DB, and sending a confirmation email to the client.
       - "success" is a view to render the thank you page.
+
 
 <br>
 

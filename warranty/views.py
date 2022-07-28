@@ -8,7 +8,7 @@ from django.template.loader import render_to_string
 
 
 def add_warranty(request):
-    """ A view to add details for warranty registration and to send 
+    """ A view to add details for warranty registration and to send
         a confirmation email"""
         
     form = WarrantyRegistrationForm(request.POST or None)
@@ -54,7 +54,6 @@ def add_warranty(request):
             [email],
             html_message=html,
         )
-        print(response)
         return redirect("registration_success")
 
     form = WarrantyRegistrationForm()
