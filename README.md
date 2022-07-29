@@ -539,7 +539,7 @@ All the apps' functunality is revolved around the shopping bag signals.
 
 ![ER Diagram](https://github.com/tamirgen/hidow/blob/main/media/er-diagram-hidow-new.jpg?raw=true)
 
-<a href="https://drive.google.com/file/d/1ezm1DInetMLq_0O-b14VYSnYgbn6LTSJ/view?usp=sharing">Open as a PDF</a>
+<a href="https://drive.google.com/file/d/1ezm1DInetMLq_0O-b14VYSnYgbn6LTSJ/view?usp=sharing" target="_blank">Open as a PDF</a>
 
 <br>
 
@@ -656,15 +656,11 @@ All the apps' functunality is revolved around the shopping bag signals.
 
     - **Procudt details**
 
-    ![Lighthouse report for room details page image](https://github.com/tamirgen/hidow/blob/main/media/hidow-lighthouse-products.jpg?raw=true)
+    ![Lighthouse report for home](https://github.com/tamirgen/hidow/blob/main/media/hidow-lighthouse-products.jpg?raw=true)
 
     - **Checkout page**
 
-    ![Lighthouse report for booking confirmation page image](https://github.com/tamirgen/hidow/blob/main/media/hidow-lighthouse-checkout.jpg?raw=true)
-
-    - **Reviews page**
-
-     ![Lighthouse report for booking confirmation page image](https://github.com/tamirgen/hidow/blob/main/media/hidow-lighthouse-reviews.jpg?raw=true)
+    ![Lighthouse report for checkout](https://github.com/tamirgen/hidow/blob/main/media/hidow-lighthouse-checkout.jpg?raw=true)
 
 <br>
 
@@ -692,7 +688,13 @@ All the apps' functunality is revolved around the shopping bag signals.
 - App was tested on IOS and Android.
 - A test to add an ending to the URL resulted in a 404 error and redirecting button to home.
 - The website is using toast messages across all major apps. All the messages were tested and worked as intended.
-
+- The "free delivery over $50" calculator was tested and is calculating as it should.
+- All optional and mandatory fields in all the forms across the app were tested and are working as intended.
+- Links to external articles were tested and opened in a tab.
+- Confirmation emails for orders and warranty registration are being sent to registered email addresses.
+- Account creation email is sent as intended.
+- processes for password adjustments, changing passwords,s or forgetting the password were tested.
+- The app was tested as an admin, and all additional options appear.
 
 <br>
 
