@@ -139,9 +139,9 @@ The main font used in the site Sans-Serif.
 * **Landing Page**
 ----------------
 
-![Landing-page-main-section](https://github.com/tamirgen/hidow/blob/main/media/readme-landing-page-main.jpg?raw=true)
+![Landing-page-main-section](https://github.com/tamirgen/hidow/blob/main/media/hidow-hero-rm-new.jpg?raw=true)
 
-![Landing-page-sub-section](https://github.com/tamirgen/hidow/blob/main/media/landing-page-sub-section.jpg?raw=true)
+![Landing-page-sub-section](https://github.com/tamirgen/hidow/blob/main/media/hidow-lp-bottom-rm-new.jpg?raw=true)
 
 - The landing page contains the website header, 2 sections, and a footer.
 - The main section is a cover image with an H2 headline and a call-to-action button for "Shop Now".
@@ -537,7 +537,7 @@ All the apps' functunality is revolved around the shopping bag signals.
 
 <br>
 
-![ER Diagram](https://github.com/tamirgen/hidow/blob/main/media/er-diagram-hidow.jpg?raw=true)
+![ER Diagram](https://github.com/tamirgen/hidow/blob/main/media/er-diagram-hidow-new.jpg?raw=true)
 
 
 <br>
