@@ -283,8 +283,7 @@ One button to get to the checkout ("SECURE CHECKOUT") and the other to "KEEP SHO
  * Auther title\name.
  * The star rating 1-5.
  * A comment section.
-- The only mandatory fields are the star rating and comment fields.
-- The author part has a default title of "anonymous".
+- All the fields are mandatory to get a valid form.
 - Once the form is complete, the user submits the review using the "RATE NOW" button.
 - After submitting the form, the user will be redirected to a thank you page that has a "BACK TO OUR HOME PAGE" button and a "Thank you. Your review will be checked by the website owner." massage.
 
@@ -385,10 +384,10 @@ The Admin panel includes the following sections:
     - Products: the admin can view, add, remove and edit any product in the section.
     - Reviews: the admin can view, add, remove and edit any review in the section.
 
-- Warranty- this section has one model:
+- WARRANTY- this section has one model:
     - Warranty registrations: the admin can view, add, remove and edit any registration in the section.
 
-![admin panel](https://github.com/tamirgen/hidow/blob/main/media/readme-admin-panel.jpg?raw=true)
+![admin panel](https://github.com/tamirgen/hidow/blob/main/media/admin-panel-rm-new.jpg?raw=true)
 
 <br>
 
