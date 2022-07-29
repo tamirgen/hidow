@@ -539,6 +539,7 @@ All the apps' functunality is revolved around the shopping bag signals.
 
 ![ER Diagram](https://github.com/tamirgen/hidow/blob/main/media/er-diagram-hidow-new.jpg?raw=true)
 
+<a href="https://drive.google.com/file/d/1ezm1DInetMLq_0O-b14VYSnYgbn6LTSJ/view?usp=sharing">Open as a PDF</a>
 
 <br>
 
@@ -623,6 +624,12 @@ All the apps' functunality is revolved around the shopping bag signals.
 
 * As a website owner I can enable and disable the products' reviews so that I can decide which products to allow to get reviewed
      - The admin has an enable\disable button in the app itself that changes colors accordingly. He can also enable\disable reviews through the product setting of the Product model in the admin panel. Both options were tested and logic is functioning as expected
+
+* As a client, I can activate my warranty for the products so that if I have a warranty issue with a product I will be able to get it fixed
+  - The warranty form was tested and all fields are working as intended. Upon submitting the form, the user is sent to a thank you page, and an email is sent to the registered email adders with the registration details, confirmation of the registration, and links to contact if he needs further assistance
+
+* As a website owner, I can see a list of warranty registered clients so that I can provide warranty solutions to registered clients
+  - The admin can see a list of registration forms in the admin panel. He can edit those details and can verify if a client is registered. He can use this list to identify if a client should be getting services from the company in cases he was activating his warranty
 
 <br>
 
