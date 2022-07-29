@@ -177,9 +177,7 @@ This page contains all the products and can be reached from the "Shop Now" butto
 * **Product Details page**
 -----------------
 
-![product details page top](https://github.com/tamirgen/hidow/blob/main/media/readme-product-top.jpg?raw=true)
-
-![product details page bottom](https://github.com/tamirgen/hidow/blob/main/media/readme-product-bottom.jpg?raw=true)
+![product details](https://github.com/tamirgen/hidow/blob/main/media/product-details-rm-new.jpg?raw=true)
 
 - The page contains a detailed description of the product.
 - Every product has the following information:
@@ -198,11 +196,11 @@ The selector can be used by writing the quantity, using the +\- buttons or the u
     * The reviews part has 2 options:
       - If there is are reviews, they will show under the main section:
 
-      ![product reviews-when there are reviews](https://github.com/tamirgen/hidow/blob/main/media/readme-product-bottom.jpg?raw=true)
+      ![product reviews-when there are reviews](https://github.com/tamirgen/hidow/blob/main/media/product-reviews-is-review-rm-new.jpg?raw=true)
 
       - If there are no reviews, a massage will appear stating: "We are sorry... This Product doesn't have any reviews yet."
 
-        ![product reviews-when there are no reviews](https://github.com/tamirgen/hidow/blob/main/media/readme-product-bottom.jpg?raw=true)
+        ![product reviews-when there are no reviews](https://github.com/tamirgen/hidow/blob/main/media/products-reviews-no-reviews-rm-new.jpg?raw=true)
 
 <br>
 
@@ -247,7 +245,7 @@ One button to get to the checkout ("SECURE CHECKOUT") and the other to "KEEP SHO
 
 <br>
 
-* **Thank you page**
+* **Checkout Thank you page**
 ------------------------------
 
 ![Thank you paoge top](https://github.com/tamirgen/hidow/blob/main/media/readme-thank-you-top.jpg?raw=true)
@@ -268,7 +266,7 @@ One button to get to the checkout ("SECURE CHECKOUT") and the other to "KEEP SHO
 * **Write a review**
 ----------------------
 
-![Write a review](https://github.com/tamirgen/hidow/blob/main/media/readme-write-review-top.jpg?raw=true)
+![Write a review](https://github.com/tamirgen/hidow/blob/main/media/write-a-review-rm-new.jpg?raw=true)
 
 - The page contains products that were pre-approved by the admin to be eligible for getting a review.
 - The page is accessed through the "REVIEW" tab from the main navigation bar.
@@ -279,7 +277,7 @@ One button to get to the checkout ("SECURE CHECKOUT") and the other to "KEEP SHO
 * **Review form**
 ----------------------
 
-![Write a review form](https://github.com/tamirgen/hidow/blob/main/media/readme-review-form.jpg?raw=true)
+![Write a review form](https://github.com/tamirgen/hidow/blob/main/media/review-form-rm-new.jpg?raw=true)
 
 - The review form contains 3 parts:
  * Auther title\name.
@@ -293,11 +291,10 @@ One button to get to the checkout ("SECURE CHECKOUT") and the other to "KEEP SHO
 * **Write a review thank you page**
 ----------------------------------
 
-![Write a review thank you page](https://github.com/tamirgen/hidow/blob/main/media/readme-review-form.jpg?raw=true)
+![Write a review thank you page](https://github.com/tamirgen/hidow/blob/main/media/write-a-review-thankyou-rm-new.jpg?raw=true)
 
 The thank you page has a thank you headline and in body the message is: "Your review will be checked by the website owner."
 Under the message, there is a "BACK TO OUR HOME PAGE" button.
-
 
 <br>
 
@@ -306,14 +303,35 @@ Under the message, there is a "BACK TO OUR HOME PAGE" button.
 
 ![Profile](https://github.com/tamirgen/hidow/blob/main/media/readme-profile.jpg?raw=true)
 
-
-
 - The page contains 2 sections:
     - Profile information: The information extracted at the checkout page, if the user created an account or has an account, is stored on the left side of the page.
     - Previous orders: The right side contains all the user's past orders. The visible information includes the order date, order products, and the order amount.
     The order number is clickable and will redirect to an order's complete information.
 
 <br>
+
+* **Warranty Registration**
+---------------------------
+
+![Warranty registration form](https://github.com/tamirgen/hidow/blob/main/media/warranty-reg-form-rm.jpg?raw=true)
+
+- This page is a form for any client to register thier devices, in order to activate the warranty for the product.
+As the products can be bought through different outlets such as pharmecises or physiotherapists, there is no need to have a profile on the website, so the registarion is not linked to the profile app.
+The form contains full name, email, full address, date of registartion and the product purchase. In addition, the client can spesify the amount of devices he would like to register.
+If the form is valid, meaning that all the fields were filled beside "sttert_address_2", which is optional, he will redirect the a thank you page and an email will be sent to him, for his records. 
+
+The page is easliy eccessable from the nav bar under the "LIFETIME WARRANTY" tab.
+The sub-tab is highlighet in red to mark it is different than the rest of the tabs.
+
+![Warranty registration form](https://github.com/tamirgen/hidow/blob/main/media/warranty-reg-nav-bar.jpg?raw=true)
+
+* **Warranty Registration Thank you page**
+------------------------------
+
+The thank you page has a thank you headline and in body the message is: "Your registration was successfuly complited and a confirmation email was sent to you."
+Under the message, there is a "BACK TO OUR HOME PAGE" button.
+
+![Warranty registration thank you](https://github.com/tamirgen/hidow/blob/main/media/warranty-reg-thankyou-rm.jpg?raw=true)
 
 ### Admin Features
 ------------------
