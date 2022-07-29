@@ -301,7 +301,7 @@ Under the message, there is a "BACK TO OUR HOME PAGE" button.
 * **My Profile**
 ----------------------
 
-![Profile](https://github.com/tamirgen/hidow/blob/main/media/readme-profile.jpg?raw=true)
+![Profile](https://github.com/tamirgen/hidow/blob/main/media/my-profile-rm-new.jpg?raw=true)
 
 - The page contains 2 sections:
     - Profile information: The information extracted at the checkout page, if the user created an account or has an account, is stored on the left side of the page.
@@ -315,23 +315,25 @@ Under the message, there is a "BACK TO OUR HOME PAGE" button.
 
 ![Warranty registration form](https://github.com/tamirgen/hidow/blob/main/media/warranty-reg-form-rm.jpg?raw=true)
 
-- This page is a form for any client to register thier devices, in order to activate the warranty for the product.
-As the products can be bought through different outlets such as pharmecises or physiotherapists, there is no need to have a profile on the website, so the registarion is not linked to the profile app.
-The form contains full name, email, full address, date of registartion and the product purchase. In addition, the client can spesify the amount of devices he would like to register.
-If the form is valid, meaning that all the fields were filled beside "sttert_address_2", which is optional, he will redirect the a thank you page and an email will be sent to him, for his records. 
+- This page is a form for any client to register their devices, in order to activate the warranty for the product.
+As the products can be bought through different outlets such as pharmacies or physiotherapists, there is no need to have a profile on the website, so the registration is not linked to the profile app.
+The form contains the client’s full name, email, full address, date of registration, and the product purchase. In addition, the client can specify the number of devices he would like to register.
+If the form is valid, meaning that all the fields were filled beside "sttert_address_2", which is optional, he will be redirected to a thank you page and an email will be sent to him, for his records. 
 
-The page is easliy eccessable from the nav bar under the "LIFETIME WARRANTY" tab.
-The sub-tab is highlighet in red to mark it is different than the rest of the tabs.
+The page is easily accessible from the nav bar under the "LIFETIME WARRANTY" tab.
+The sub-tab is highlighted in red to mark it as different than the rest of the tabs.
 
 ![Warranty registration form](https://github.com/tamirgen/hidow/blob/main/media/warranty-reg-nav-bar.jpg?raw=true)
 
 * **Warranty Registration Thank you page**
 ------------------------------
 
-The thank you page has a thank you headline and in body the message is: "Your registration was successfuly complited and a confirmation email was sent to you."
+The thank you page has a thank you headline and in the body, the message is: "Your registration was successfully completed and a confirmation email was sent to you."
 Under the message, there is a "BACK TO OUR HOME PAGE" button.
 
 ![Warranty registration thank you](https://github.com/tamirgen/hidow/blob/main/media/warranty-reg-thankyou-rm.jpg?raw=true)
+
+<br>
 
 ### Admin Features
 ------------------
