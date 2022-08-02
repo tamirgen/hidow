@@ -464,10 +464,10 @@ I have used six apps for this project, each serves a difernt porpuse:
    * The app doesn't use database models.
 
    * The app has 4 views:
-     - view_bag: renders the bag content.
-     - add_to_bag: Add a quantity of the specified product to the shopping bag.
-     - adjust_bag: Adjust the quantity of the specified product to the specified amount.
-     - remove_from_bag: Remove the item from the shopping bag.
+     - "view_bag" that renders the bag content.
+     - "add_to_bag"is for adding quantity of the specified product to the shopping bag.
+     - "adjust_bag" will adjust the quantity of the specified product to the specified amount.
+     - "remove_from_bag" will remove the item from the shopping bag.
 
 The app is usig the data from the Product model of the products app. 
 All the apps' functunality is revolved around the shopping bag signals.
@@ -496,16 +496,16 @@ All the apps' functunality is revolved around the shopping bag signals.
 - The products app:
 
     * The app has 3 models:
-      - The Category model collects and stores the product's name and friendly name.
-      - The Product model that stores the product's category, SKU, description, size, price, rating, image URL, image, and reviews enabled\disabled.
-      - The Review model stores the form details used to create a review and has the author name, review date, rate choices, stars, comment, and a product to associate the review with.
+      - The "Category" model collects and stores the product's name and friendly name.
+      - The "Product" model that stores the product's category, SKU, description, size, price, rating, image URL, image, and reviews enabled\disabled.
+      - The "Review" model stores the form details used to create a review and has the author name, review date, rate choices, stars, comment, and a product to associate the review with.
 
     * The app has 10 views:
       - "all_products"- A view to show all products, including sorting and search queries.
       - "product_detail"- A view to show individual product details and reviews, if there are any.
-      - "add_produc"- A view to add a product to the store.
-      - "edit_produc"- A view to edit a product in the store.
-      - "delet_produc"- A view to delete a product from the store.
+      - "add_product"- A view to add a product to the store.
+      - "edit_product"- A view to edit a product in the store.
+      - "delete_product"- A view to delete a product from the store.
       - "enable_rating"- A view to enable reviewing a product.
       - "disable_rating"- A view to disable reviewing a product.
       - "products_for_rate"- A view to filter and display products that are eligible for reviews.
@@ -526,7 +526,7 @@ All the apps' functunality is revolved around the shopping bag signals.
 - The warranty app:
 
     * The warranty app has 1 model:
-      - The Warranty registration model stores data that includes full name, email, addresses (address 1, address 2, postcode, city or town, county, and country), date, products, and quantities.
+      - The "Warranty registration" model stores data that includes full name, email, addresses (address 1, address 2, postcode, city or town, county, and country), date, products, and quantities.
      
     * The app has 2 views:
       - "add_warranty" is in charge of validating the registration form, collecting the data, adding the data to the DB, and sending a confirmation email to the client.
